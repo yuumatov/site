@@ -1,0 +1,259 @@
+@font-face {
+  font-family: 'SF UI Display';
+  font-display: auto;
+  src: url("../fonts/SFUIDisplay-Medium.eot");
+  src: local("SF UI Display Medium"), local("SFUIDisplay-Medium"), url("../fonts/SFUIDisplay-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUIDisplay-Medium.woff") format("woff"), url("../fonts/SFUIDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  font-display: auto;
+  src: url("../fonts/SFUIDisplay-Regular.eot");
+  src: local("SF UI Display Regular"), local("SFUIDisplay-Regular"), url("../fonts/SFUIDisplay-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUIDisplay-Regular.woff") format("woff"), url("../fonts/SFUIDisplay-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  font-display: auto;
+  src: url("../fonts/SFUIDisplay-Light.eot");
+  src: local("SF UI Display Light"), local("SFUIDisplay-Light"), url("../fonts/SFUIDisplay-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUIDisplay-Light.woff") format("woff"), url("../fonts/SFUIDisplay-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  font-display: auto;
+  src: url("../fonts/SFUIDisplay-Thin.eot");
+  src: local("SF UI Display Thin"), local("SFUIDisplay-Thin"), url("../fonts/SFUIDisplay-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUIDisplay-Thin.woff") format("woff"), url("../fonts/SFUIDisplay-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  font-display: auto;
+  src: url("../fonts/SFUIDisplay-Semibold.eot");
+  src: local("SF UI Display Semibold"), local("SFUIDisplay-Semibold"), url("../fonts/SFUIDisplay-Semibold.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUIDisplay-Semibold.woff") format("woff"), url("../fonts/SFUIDisplay-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SF UI Display';
+  font-display: auto;
+  src: url("../fonts/SFUIDisplay-Bold.eot");
+  src: local("SF UI Display Bold"), local("SFUIDisplay-Bold"), url("../fonts/SFUIDisplay-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/SFUIDisplay-Bold.woff") format("woff"), url("../fonts/SFUIDisplay-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'SF UI Display', sans-serif;
+  font-display: auto;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.menu__list:hover .menu__label {
+  color: #dadada;
+}
+
+.menu__list:hover .menu__label:hover {
+  color: #3e3e3e;
+}
+
+.menu__item {
+  list-style-type: none;
+}
+
+.menu__label {
+  font-weight: 300;
+  display: block;
+  color: #737373;
+  padding: 14px;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.content {
+  width: 768px;
+  padding: 40px 20px;
+  height: calc(100vh - 70px);
+  overflow: hidden;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+article {
+  width: calc(100% - 40px);
+  height: calc(100% - 80px);
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  z-index: 0;
+}
+
+article p {
+  line-height: 1.6em;
+}
+
+.article__title {
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: #1A1E2D;
+  font-weight: 500;
+}
+
+.comments__list {
+  height: inherit;
+  overflow-y: auto;
+  padding-right: 30px;
+}
+
+.comments .comments__list::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background-color: #fdfdfd;
+  border-radius: 2px;
+}
+
+.comments .comments__list::-webkit-scrollbar-button {
+  display: none;
+}
+
+.comments .comments__list::-webkit-scrollbar-track {
+  display: none;
+}
+
+.comments .comments__list::-webkit-scrollbar-track-piece {
+  display: none;
+}
+
+.comments .comments__list::-webkit-scrollbar-thumb {
+  background-color: #dadada;
+  border-radius: 2px;
+}
+
+.comments .comments__list::-webkit-scrollbar-corner {
+  display: none;
+}
+
+.comments .comments__list::-webkit-resizer {
+  display: none;
+}
+
+.comments__item {
+  margin-bottom: 60px;
+}
+
+.comments__item:last-child {
+  margin-bottom: 0;
+}
+
+.comments__author {
+  font-size: 18px;
+  color: #1A1E2D;
+  font-weight: 500;
+}
+
+.comments__link {
+  display: inline-block;
+  font-size: 12px;
+  color: #737373;
+  text-decoration: none;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  margin-bottom: 20px;
+}
+
+.comments__link:hover {
+  color: #3e3e3e;
+}
+
+.comments__text {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+#check2:checked ~ .menu,
+#check3:checked ~ .menu,
+#check4:checked ~ .menu,
+#check5:checked ~ .menu {
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.98);
+}
+
+#check2:checked ~ .menu .menu__label,
+#check3:checked ~ .menu .menu__label,
+#check4:checked ~ .menu .menu__label,
+#check5:checked ~ .menu .menu__label {
+  font-size: 18px;
+}
+
+#check2:checked ~ .content #about,
+#check3:checked ~ .content #portfolio,
+#check4:checked ~ .content #comments,
+#check5:checked ~ .content #contact {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  z-index: 10;
+}
+
+#check1:checked ~ .menu {
+  height: 100vh;
+  background-color: #fff;
+  z-index: 10;
+}
+
+#check1:checked ~ .menu .menu__label {
+  font-size: 24px;
+}
+/*# sourceMappingURL=style.css.map */
