@@ -1,0 +1,41 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #fcd203;
+	font-family: 'Montserrat';
+}
+
+a {
+	text-decoration: none;
+}
+
+.header-container {
+	max-width: 1650px;
+	height: 100%;
+	margin: auto;
+	padding: 0 15px;
+}
+
+.container {
+	max-width: 1170px;
+	height: auto;
+	margin: auto;
+	background-color: #fff;
+	border-radius: 6px;
+	padding: 50px 68px;
+	margin-top: 56px;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	overflow: hidden;
+}
+
+.button {
+	color: #fff;
+}
+
+.hidden {
+	display: none;
+}

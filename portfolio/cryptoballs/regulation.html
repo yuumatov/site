@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Crypto Balls</title>
+	<link rel="stylesheet" href="scss/main.css">
+</head>
+<body>
+	<header class="header">
+		<div class="header-top header-top-1">
+			<div class="header-top-block-content">
+				<img src="img/icon/top-content-messege.png" alt="">
+				<p><a href="#">Подписаться </a>на push-уведомления CryptoBalls</p>
+			</div>
+			<div class="header-top-block-close">
+				<p>Отменить</p>
+			</div>
+		</div>
+
+		<div class="header-top header-top-2 hidden">
+			<div class="header-top-block-content">
+				<img src="img/icon/top-content-metamask.png" alt="">
+				<p>Внимание! Нет Metamask. <a href="#">Установите плагин</a></p>
+			</div>
+			<div class="header-top-block-close">
+				<p>Отменить</p>
+			</div>
+		</div>
+
+		<div class="header-top header-top-3 hidden">
+			<div class="header-top-block-content">
+				<img src="img/icon/top-content-check.png" alt="">
+				<p>Внимание! Попробуйте тестовую сеть для ETH лотереи.</p>
+			</div>
+			<div class="header-top-block-close">
+				<p>Отменить</p>
+			</div>
+		</div>
+
+		<div class="header-container">
+			<div class="header-wrapper">
+				<div class="logo">
+					<img src="img/logo.png" alt="">
+				</div>
+				<a href="buy.html" class="button button-header">Купить билет</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Главная</a></li>
+						<li><a href="#">О лотерее</a></li>
+						<li><a href="archive.html">Архив тиражей</a></li>
+						<li><a href="regulation.html" class="active">Правила</a></li>
+						<li><a href="myticket.html">Мои билеты</a></li>
+						<li><a href="referrals.html">Рефералы</a></li>
+					</ul>
+				</nav>
+				<div class="btn-popup-menu">Навигация</div>
+				<div class="output">
+					<div class="output-number">
+						<p>81</p>
+						<span>ETH</span>
+					</div>
+					<a href="#">Вывести</a>
+				</div>
+			</div>
+		</div>
+		<div class="header-line">
+			<span>Открытая ETH лотерея</span>
+		</div>
+	</header>
+
+	<main class="main regulation">
+		<div class="container">
+			<div class="regulation-wrapper">
+				<div class="regulation-title">
+					<h1>Правила лотереи</h1>
+				</div>
+				<div class="tabs">
+				    <ul>
+				        <li>Как заполнить билет</li>
+				        <li>Скриншоты</li>
+				        <li>Что я могу выиграть</li>
+				        <li>Где узнать результаты</li>
+				        <li>Как получить выигрышь</li>
+				    </ul>
+				    <div>
+				        <div>
+				        	<img src="img/content/tabs1.png">
+				        	<p>Так выглядит купон в розничных точках продаж.</p>
+				        	<p>В билете – 6 игровых полей А, Б, В, Г, Д, Е. Заполнить можно сразу все. <br> В каждом поле – числа от 1 до 45.</p>
+				        	<p>Выберите не мение 6 неповторяющихся чисел в любом поле – вы можите заполнить одно поле или сразу шесть (А, Б, В, Г, Д и Е). <br> – Если вы отметите ячейку "Автоматически", то электронная система случайным образом выберет числа за вас. <br> – Для участия в некоторых тиражах укажите их количество в специальной графе.</p>
+				        	<p>Выбрав числа, укажите номер телефона на обратной стороне билета и оплатите его. <br> Обязательно сохраните квитанцию до получения выигрыша!</p>
+				        </div>
+				        <div>2</div>
+				        <div>
+				        	<p>Выигрывают комбинации, в которых в одном поле 2, 3, 4, 5 или 6 чисел из 45 совпали с выигрышными числами.</p>
+				        	<p>Призовой фонд – 50% с каждого проданного билета.</p>
+				        	<p>Те участники, кто угадал 2 числа, получают по 100 рублей каждый. Оставшимся призовой фонд распределяется в следуещем процентном соотношении:</p>
+				        	<img src="img/content/tabs3.png">
+				        </div>
+				        <div>4</div>
+				        <div>5</div>
+				    </div>            
+				</div>
+			</div>
+			<img src="img/icon/logo-fon.png" class="logo-fon">
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="header-container">
+			<div class="footer-wrapper">
+				<div class="footer-block">
+					<a href="#">Политика в отношении обработки персональных данных</a>
+					<a href="#">English version</a>
+					<a href="#">Мобильная версия</a>
+					<a href="#">Контактная информация</a>
+					<p>© 2018 CryptoBalls</p>
+				</div>
+				<div class="footer-block">
+					<a href="#" class="link-rss">Тиражная информация <img src="img/icon/rss.png" alt=""></a>
+					<a href="#" class="link-rss">Лотерейные новости <img src="img/icon/rss.png" alt=""></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/sticky.js"></script>
+	<script src="js/tabs.js"></script>
+	<script src="js/mian.js"></script>
+</body>
+</html>

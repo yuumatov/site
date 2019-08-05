@@ -1,0 +1,721 @@
+@media screen and (min-width: 2000px) {
+	.body-index {
+		background: url(../img/bg/fon1.png) no-repeat left bottom,
+					url(../img/bg/fon2.png) no-repeat right bottom,
+					url(../img/bg/fon3.png) no-repeat center top 225px;
+		background-size: 25%, 20%, auto;
+		background-color: #fcd203;
+	}
+}
+
+@media screen and (max-width: 1520px) {
+	.header-container {
+		.header-wrapper {
+			flex-wrap: wrap;
+			.logo {
+				display: flex;
+				justify-content: center;
+				width: 100%;
+				margin-top: 20px;
+				margin-bottom: 14px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1280px) {
+	.header-container {
+		.header-wrapper {
+			position: relative;
+			justify-content: flex-start;
+			.logo {
+				order: 1;
+			}
+			
+			.button-header {
+				order: 3;
+			}
+
+			nav {
+				border-radius: 6px;
+				padding: 20px 30px;
+				background-color: #fcd203;
+				position: absolute;
+				top: 155px;
+				left: 0;
+				list-style-position: outside;
+				display: none;
+				box-shadow: 0px 4px 20px 0px rgba(0,0,0,0.3);
+				ul {
+					display: block;
+					li {
+						a {
+							padding: 8px 0;
+						}
+					}
+				}
+			}
+
+			.btn-popup-menu {
+				margin-right: 30px;
+				display: block !important;
+				order: 2;
+			}
+
+			.output {
+				order: 4;
+				margin-left: auto;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1120px) {
+	.container-block-ticket .block-ticket-description-addticket {
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 15px;
+	}
+
+	.block-ticket-description {
+		margin-bottom: 15px;
+	}
+
+	.referrals .referrals-wrapper {
+		flex-direction: column;
+	}
+
+	.referrals .referrals-wrapper .referrals-block-link {
+		margin-bottom: 30px;
+	}
+
+	.referrals .referrals-wrapper .referrals-block-meta {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 1070px) {
+	.edition .edition-wrapper .edition-result .edition-result-wrapper {
+		flex-direction: column;
+	}
+	.edition .edition-wrapper .edition-result .edition-result-wrapper .edition-result-block1 {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	.edition .edition-wrapper .edition-result .edition-result-wrapper .edition-result-block2 {
+		width: 100%;
+	}
+	.edition .edition-wrapper .edition-result .edition-result-wrapper .edition-result-block1 table {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 1016px) {
+	.myticket {
+		.myticket-link {
+			flex-wrap: wrap;
+			a {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	.change-ticket-button {
+		flex-wrap: wrap;
+		.ticket-button-close {
+			margin-top: 14px;
+		}
+	}
+}
+
+@media screen and (max-width: 860px) {
+	.logo-fon {
+		display: none !important;
+	}
+
+	.container {
+		margin-top: 15px;
+		padding: 26px 34px;
+	}
+
+	.header .header-line {
+		margin-top: 15px;
+	}
+
+	.main {
+		margin-bottom: 30px;
+	}
+
+	.myticket {
+		.myticket-link {
+			flex-wrap: wrap;
+			a {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	.change-ticket-button {
+		flex-wrap: wrap;
+		.ticket-button-close {
+			margin-top: 14px;
+		}
+	}
+
+	.myticket-block-ticket-wrapper {
+		display: block !important;
+		.container-block-ticket {
+			width: 100%;
+		}
+		.container-block-buy {
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+
+	.change-ticket-button {
+		flex-wrap: wrap;
+		.ticket-button-close {
+			margin-top: 0px;
+		}
+	}
+
+	.main-home .main-title {
+		h1 {
+			font-size: 42px;
+		}
+		span {
+			font-size: 26px;
+		}
+	}
+
+	.main-home .button-main {
+		padding: 16px 56px;
+		p {
+			font-size: 28px;
+		}
+		span {
+			font-size: 12px;
+		}
+	}
+
+	.main-home .main-time {
+		font-size: 32px;
+		&:after {
+			top: 7px;
+		}
+		&:before {
+			top: 7px;
+		}
+	}
+
+	.buy {
+		.container {
+			flex-direction: column;
+		}
+		.block-ticket-description {
+			margin-bottom: 15px;
+		}
+
+		.container-block-buy {
+			margin-top: 50px;
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+
+	.container-block-ticket {
+		width: 100%;
+	}
+
+	.container-block-ticket .block-ticket-description-addticket {
+		flex-direction: row;
+		align-items: center;
+		margin-bottom: 0px;
+	}
+	
+	.archive .archive-wrapper .archive-table-header table tr td {
+		vertical-align: middle;
+	}
+	.archive .archive-wrapper .archive-table-header table tr td:nth-child(1) {
+		width: 25%;
+	}
+	.archive .archive-wrapper .archive-table-header table tr td:nth-child(2) {
+		width: 10%;
+	}
+	.archive .archive-wrapper .archive-table-header table tr td:nth-child(3) {
+		width: 30%;
+	}
+	.archive .archive-wrapper .archive-table-header table tr td:nth-child(4) {
+		width: 20%;
+	}
+	.archive .archive-wrapper .archive-table-header table tr td:nth-child(5) {
+		width: 15%;
+	}
+
+	.archive .archive-wrapper .archive-table table tr td:nth-child(1) {
+		width: 25%;
+	}
+	.archive .archive-wrapper .archive-table table tr td:nth-child(2) {
+		width: 10%;
+	}
+	.archive .archive-wrapper .archive-table table tr td:nth-child(3) {
+		width: 30%;
+	}
+	.archive .archive-wrapper .archive-table table tr td:nth-child(4) {
+		width: 20%;
+		padding-left: 16px;
+	}
+	.archive .archive-wrapper .archive-table table tr td:nth-child(5) {
+		width: 15%;
+	}
+
+	.edition .edition-wrapper .edition-number-wrapper .edition-number {
+		width: 70px;
+		height: 70px;
+		font-size: 26px;
+	}
+}
+
+@media screen and (max-width: 740px) {
+	.body-index {
+		background: url(../img/bg/fon3.png) no-repeat center top 225px;
+		background-size: 25%, 20%, auto;
+		background-color: #fcd203;
+	}
+
+	.header .header-top {
+		padding-left: 38px;
+		.header-top-block-content {
+			justify-content: flex-start;
+		}
+	}
+
+	.footer {
+		margin-bottom: 30px;
+		.footer-wrapper {
+			flex-direction: column;
+			align-items: flex-start;
+			.footer-block:nth-child(1) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+	
+
+	.footer .footer-wrapper .footer-block .link-rss {
+		justify-content: flex-start;
+	}
+}
+
+@media screen and (max-width: 680px) {
+	.body-index {
+		background: url(../img/bg/fon3.png) no-repeat center top 270px;
+		background-size: 25%, 20%, auto;
+		background-color: #fcd203;
+	}
+
+	.header .header-wrapper {
+		height: auto;
+		.button-header {
+			order: 2;
+			width: calc(50% - 10px);
+			margin-bottom: 20px;
+		}
+		.btn-popup-menu {
+			order: 4;
+			width: 100%;
+			margin-right: 0;
+		}
+		.output {
+			order: 3;
+			justify-content: space-between;
+			width: calc(50% - 10px);
+			margin-bottom: 20px;
+			margin-left: 20px;
+		}
+		nav {
+			top: 216px;
+		}
+	}
+
+	.container-block-ticket .block-ticket-description-addticket {
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 15px;
+	}
+
+
+	.archive .archive-wrapper .archive-table-header table tr {
+		display: block;
+	}
+	.archive .archive-wrapper .archive-table-header table tr td {
+		padding: 10px 20px;
+		display: flex;
+	}
+	.archive .archive-wrapper .archive-table-header table tr td:nth-child(1) {
+		width: 100%;
+	}
+	.archive .archive-wrapper .archive-table-header table tr td:nth-child(2) {
+		width: 100%;
+	}
+	.archive .archive-wrapper .archive-table-header table tr td:nth-child(3) {
+		width: 100%;
+	}
+	.archive .archive-wrapper .archive-table-header table tr td:nth-child(4) {
+		display: none;
+	}
+	.archive .archive-wrapper .archive-table-header table tr td:nth-child(5) {
+		width: 100%;
+	}
+
+	.archive .archive-wrapper .archive-table table tr {
+		display: flex;
+		flex-direction: column;
+		height: auto;
+		border-bottom: 1px solid #dedede;
+		padding: 15px;
+	}
+	.archive .archive-wrapper .archive-table table tr td {
+		display: block;
+	}
+	.archive .archive-wrapper .archive-table table tr:hover td {
+		background-color: #fff;
+	}
+	.archive .archive-wrapper .archive-table table tr td:nth-child(1) {
+		padding: 0;
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	.archive .archive-wrapper .archive-table table tr td:nth-child(2) {
+		padding: 0;
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	.archive .archive-wrapper .archive-table table tr td:nth-child(3) {
+		padding: 0;
+		width: 100%;
+		margin-bottom: 15px;
+	}
+	.archive .archive-wrapper .archive-table table tr td:nth-child(4) {
+		padding: 0;
+		width: 100%;
+		order: 1;
+	}
+	.archive .archive-wrapper .archive-table table tr td:nth-child(4) a {
+		color: #000;
+	}
+	.archive .archive-wrapper .archive-table table tr td .td-wrapper {
+		justify-content: flex-start;
+		span {
+			margin-right: 5px;
+		}
+	}
+	.archive .archive-wrapper .archive-table table tr td:nth-child(5) {
+		padding: 0;
+		width: 100%;
+		margin-bottom: 15px;
+	}
+
+	.edition-result-block1-wrapper-button {
+		flex-direction: column;
+	}
+
+	.edition .edition-wrapper .edition-result .edition-result-wrapper .edition-result-block1 .edition-result-block1-wrapper-button .button-edition1 {
+		margin-right: 0;
+		margin-bottom: 15px;
+	}
+
+	.table-over {
+		overflow-x: scroll;
+	}
+	.edition .edition-wrapper .edition-result .edition-result-wrapper .edition-result-block1 table thead tr th {
+		padding: 12px 20px;
+	}
+	.edition .edition-wrapper .edition-result .edition-result-wrapper .edition-result-block1 table tbody tr td {
+		padding: 12px 20px;
+	}
+
+	.referrals .referrals-wrapper .referrals-block-meta .referrals-block-meta-wrapper ul li {
+		flex-direction: column;
+		background: transparent;
+		span {
+			display: inline-block;
+			width: auto;
+			background-color: #eee;
+			border-radius: 6px;
+			margin-top: 15px;
+			padding: 10px 14px;
+		}
+	}
+
+	.referrals .referrals-wrapper .referrals-block-meta .referrals-block-meta-wrapper {
+		padding: 20px;
+	}
+
+	.regulation .regulation-wrapper .tabs img {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.main-home {
+		padding-top: 86px;
+		.main-title {
+			h1 {
+				font-size: 30px;
+				margin-right: 8px;
+			}
+			span {
+				font-size: 18px;
+			}
+		}
+		.main-time {
+			margin-bottom: 100px;
+		}
+		.main-description {
+			width: 100%;
+			padding: 0 30px;
+			p {
+				font-size: 16px;
+			}
+			
+		}
+	}
+
+	.edition .edition-wrapper .edition-title {
+		flex-direction: column;
+		align-items: flex-start;
+		h1 {
+			margin-bottom: 15px;
+		}
+	}
+
+	.edition .edition-wrapper .edition-number-wrapper .edition-number {
+		width: 50px;
+		height: 50px;
+		font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 556px) {
+	.container {
+		padding: 25px 20px;
+	}
+
+	.container-block-ticket .change-ticket-wrapper .change-ticket-body {
+	    grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
+	    grid-auto-rows: 45px;
+	}
+}
+
+@media screen and (max-width: 526px) {
+	.container-block-ticket .change-ticket-wrapper .change-ticket-button .ticket-button-close {
+		margin-top: 15px;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.header .header-wrapper .logo {
+		height: 76px;
+	}
+
+	.header .header-top {
+		padding-left: 15px;
+		.header-top-block-close {
+			right: 15px;
+			p {
+				display: none;
+			}
+		}
+	}
+
+	.header .header-wrapper {
+		.button-header {
+			width: 100%;
+			margin-bottom: 15px;
+		}
+		.btn-popup-menu {
+			width: 100%;
+		}
+		.output {
+			width: 100%;
+			margin-bottom: 15px;
+			margin-left: 0;
+		}
+		nav {
+			width: 100%;
+			top: 290px;
+		}
+	}
+
+	.main-home .main-result .main-result-number-wrapper {
+		width: 100%;
+	}
+
+	.main-home .main-time {
+		p {
+			margin-top: 16px;
+			margin-bottom: 16px;
+		}
+		&:after {
+			display: flex;
+			justify-content: center;
+			position: static;
+		}
+		&:before {
+			display: flex;
+			justify-content: center;
+			position: static;
+		}
+	}
+
+	.main-home .main-result .main-result-number-wrapper .main-result-number {
+		width: 40px;
+		height: 40px;
+		margin: 0 5px;
+		background-size: cover;
+		font-size: 14px;
+	}
+
+	.main-home .main-title {
+		h1 {
+			font-size: 22px;
+			margin-right: 4px;
+		}
+		span {
+			font-size: 12px;
+		}
+	}
+
+	.body-index {
+		background: url(../img/bg/fon3.png) no-repeat center top 338px;
+		background-size: 25%, 20%, auto;
+		background-color: #fcd203;
+	}
+
+	.header .header-top .header-top-block-content img {
+	    width: 10px;
+	    height: 10px;
+	    margin-right: 5px;
+	}
+
+	.header .header-top .header-top-block-content p {
+	    font-size: 10px;
+	}
+
+	.main-home .main-description p {
+		font-size: 14px;
+	}
+
+	.main-home .button-main {
+		padding: 15px 46px;
+		p {
+			font-size: 22px;
+			margin-bottom: 4px;
+		}
+		span {
+			font-size: 10px;
+		}
+		&:after {
+		    width: 12px;
+		    height: 12px;
+		    right: -6px;
+		    top: calc(50% - 6px);
+		}
+		&:before {
+		    width: 12px;
+		    height: 12px;
+		    left: -6px;
+		    top: calc(50% - 6px);
+		}
+	}
+
+	.myticket .myticket-wrapper .myticket-title {
+		flex-direction: column;
+		align-items: flex-start;
+		h1 {
+			margin-right: 0;
+			margin-bottom: 15px;
+		}
+	}
+
+	.container-block-ticket .change-ticket-wrapper .change-ticket-title {
+		flex-direction: column;
+		align-items: flex-start;
+		h1 {
+			margin-right: 0;
+			margin-bottom: 15px;
+		}
+	}
+
+	.container-block-ticket .change-ticket-wrapper .change-ticket-body {
+		grid-template-columns: repeat(auto-fill, minmax(36px, 1fr));
+    	grid-auto-rows: 36px;
+	}
+
+	.container-block-ticket .change-ticket-wrapper .change-ticket-button .ticket-button {
+		width: 40px;
+		height: 40px;
+	}
+
+	.container-block-ticket .change-ticket-wrapper .change-ticket-button .ticket-button-close {
+		width: auto;
+	}
+
+	.myticket .myticket-pagination ul li a {
+		width: 24px;
+		height: 24px;
+	}
+
+	.container-block-buy .block-buy-title {
+		flex-direction: column;
+		align-items: flex-start;
+		h1 {
+			margin-bottom: 15px;
+		}
+	}
+
+	.container-block-buy .block-buy-body {
+		padding: 24px 20px;
+	}
+
+	.container-block-ticket .change-ticket-wrapper {
+		margin-bottom: 30px;
+	}
+
+	.container-block-ticket .block-ticket-description-addticket .block-ticket-description {
+		width: 100%;
+	}
+
+	.edition .edition-wrapper .edition-result .edition-result-wrapper .edition-result-block2 .edition-result-block2-wrapper ul li {
+		flex-direction: column;
+		align-items: flex-start;
+		background: #fff;
+		span {
+			border-radius: 6px;
+			padding: 10px 14px;
+			background-color: #eee;
+			margin-top: 15px;
+			min-width: auto;
+		}
+	}
+
+	.referrals .referrals-wrapper .referrals-block-link {
+		width: 100%;
+	}
+
+	.referrals .referrals-wrapper .referrals-block-link .referrals-block-link-wrapper {
+	    padding: 21px 0;
+	    height: 50px;
+	    font-size: 10px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.edition .edition-wrapper .edition-number-wrapper .edition-number {
+		font-size: 12px;
+	    width: 40px;
+	    height: 40px;
+	}
+}
