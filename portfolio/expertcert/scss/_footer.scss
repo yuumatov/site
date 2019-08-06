@@ -1,0 +1,174 @@
+.footer {
+	width: 100%;
+	height: auto;
+	background-color: #fff;
+	padding-top: 40px;
+	padding-bottom: 45px;
+	position: relative;
+	.line {
+		width: 100%;
+		height: 2px;
+		display: flex;
+		position: absolute;
+		top: 0;
+		left: 0;
+		span {
+			display: block;
+			width: 50%;
+			height: 100%;
+			background-color: #005c8b;
+			&:last-child {
+				background-color: #c11e2f;
+			}
+		}
+	}
+}
+
+.footer_wrapper {
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 26px;
+}
+
+.footer_info {
+	display: flex;
+	align-items: center;
+	img {
+		height: 46px;
+		margin-right: 16px;
+	}
+}
+
+.copyright {
+	p {
+		font-size: 15px;
+		&:nth-child(2) {
+			font-size: 15px;
+			font-weight: 300;
+			margin-top: 10px;
+		}
+	}
+}
+
+.top_menu {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	li {
+		padding: 0 15px;
+		position: relative;
+		&:after {
+			content: "";
+			position: absolute;
+			right: -4px;
+			top: 5px;
+			width: 8px;
+			height: 8px;
+			background: url(../img/header/top_menu_after.png);
+		}
+		&:last-child:after {
+			display: none;
+		}
+		a {
+			color: #434242;
+			font-weight: 500;
+			position: relative;
+			&:after {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: -2px;
+				width: 0%;
+				height: 1px;
+				background-color: #434242;
+				transition: 0.3s;
+			}
+			&:hover:after {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.footer_wrapper_menu_callback {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-bottom: 36px;
+	.footer_wrapper_menu {
+		display: flex;
+		.footer_menu_block {
+			margin-right: 40px;
+			&:last-child {
+				margin-right: 0;
+			}
+			h1 {
+				font-size: 14px;
+				font-weight: 500;
+				color: #c11e2f;
+				text-transform: uppercase;
+				margin-bottom: 12px;
+			}
+			p {
+				margin-bottom: 10px;
+				a {
+					font-size: 14px;
+					font-weight: 500;
+					color: #000;
+					position: relative;
+					&:before {
+						position: absolute;
+						content: '';
+						width: 100%;
+						height: 1px;
+						background-color: #000;
+						opacity: 0.3;
+						bottom: 0;
+						left: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+.footer_wrapper_tel_geo {
+	display: flex;
+	align-items: flex-start;
+	.phones_block {
+		margin-right: 30px;
+	}
+	.geo {
+		flex-direction: column;
+		align-items: flex-start;
+		.geo_select {
+			border: 0;
+			margin-bottom: 6px;
+		}
+	}
+}
+
+.run_top {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	bottom: 140px;
+	left: 0;
+	background-color: #434242;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	cursor: pointer;
+	span {
+		margin-top: 11px;
+		display: block;
+		width: 18px;
+		height: 18px;
+		border-top: 2px solid #fff;
+		border-left: 2px solid #fff;
+		transform: rotate(45deg);
+	}
+}

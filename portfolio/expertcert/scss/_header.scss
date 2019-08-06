@@ -1,0 +1,397 @@
+.top_header {
+	width: 100%;
+	height: 62px;
+	background-color: #e4e4e4;
+}
+
+.top_header_wrapper {
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.geo {
+	display: flex;
+	align-items: center;
+}
+
+.geo_select {
+	display: flex;
+	align-items: center;
+	font-size: 17px;
+	font-weight: 500;
+	color: #005c8b;
+	padding: 3px 0;
+	padding-right: 12px;
+	margin-right: 12px;
+	border-right: 1px dotted #000;
+	position: relative;
+	p {
+		margin: 0 6px 0 10px;
+	}
+}
+
+#geo_select_open_popup-1 {
+	margin-top: 4px;
+	cursor: pointer;
+}
+
+.geo_select_popup {
+	display: none;
+	background-color: #fff;
+	position: absolute;
+	border: 2px solid #005c8b;
+	top: 35px;
+	left: 0;
+	z-index: 1;
+	ul {
+		li {
+			margin: 5px 0;
+			padding: 3px 14px;
+			display: flex;
+			&:hover {
+				background-color: #e4e4e4;
+			}
+			a {
+				color: #434242;
+				width: max-content;
+			}
+		}
+	}
+}
+
+.geo_map {
+	font-size: 15px;
+	font-weight: 300;
+}
+
+.top_menu {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	li {
+		padding: 0 15px;
+		position: relative;
+		&:after {
+			content: "";
+			position: absolute;
+			right: -4px;
+			top: 5px;
+			width: 8px;
+			height: 8px;
+			background: url(../img/header/top_menu_after.png);
+		}
+		&:last-child:after {
+			display: none;
+		}
+		a {
+			color: #434242;
+			font-weight: 500;
+			position: relative;
+			&:after {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: -2px;
+				width: 0%;
+				height: 1px;
+				background-color: #434242;
+				transition: 0.3s;
+			}
+			&:hover:after {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.header_wrapper {
+	display: flex;
+	padding: 25px 0;
+	justify-content: space-between;
+}
+
+.logo {
+	width: 373px;
+	height: auto;
+	position: relative;
+	img {
+		height: 100px;
+	}
+}
+
+.logo_text {
+	position: absolute;
+	font-size: 12px;
+	padding: 5px;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+.logo_text--1 {
+	left: 180px;
+    top: 22px;
+	background-color: #005c8b;
+	&:after {
+		top: -10px;
+    	left: 157px;
+		content: "";
+		position: absolute;
+		width: 11px;
+		height: 11px;
+		background-color: #005c8b;
+	}
+	&:before {
+		top: 0;
+		left: 167px;
+		content: "";
+		position: absolute;
+		width: 7px;
+		height: 7px;
+		background-color: #a2adb0;
+	}
+}
+
+.logo_text--2 {
+	left: 180px;
+    top: 44px;
+	background-color: #c11e2f;
+}
+
+.phones {
+	display: flex;
+	align-items: center;
+}
+
+.phones_block {
+	p:nth-child(1) {
+		font-size: 23px;
+		margin-bottom: 10px;
+	}
+	p:nth-child(2) {
+		font-size: 15px;
+		font-weight: 300;
+	}
+	p {
+		span {
+			color: #005c8b;
+		}
+	}
+}
+
+.phones_block--1 {
+	margin-right: 30px;
+}
+
+.callback {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	a {
+		text-align: center;
+		font-size: 15px;
+		color: #4f636c;
+		text-decoration: underline;
+	}
+}
+
+.callback_button {
+	width: 100%;
+	text-align: center;
+	font-size: 15px;
+	font-weight: 500;
+	text-transform: uppercase;
+	position: relative;
+	padding: 15px 45px;
+	cursor: pointer;
+	margin-bottom: 12px;
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: calc(100% - 6px);
+		height: 17px;
+		border: 3px solid #005c8b;
+		border-bottom: 0;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: calc(100% - 6px);
+		height: 17px;
+		border: 3px solid #c11e2f;
+		border-top: 0;
+	}
+}
+
+//Mobile SCSS
+
+.mobile_top_header_wrapper {
+	height: 100%;
+	justify-content: space-between;
+	display: none;
+	.but_mobile_menu {
+		height: 100%;
+		width: 60px;
+		background-color: #434242;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+		position: relative;
+		span {
+			display: block;
+			width: 27px;
+			height: 2px;
+			background-color: #fff;
+			margin-bottom: 8px;
+			&:nth-child(3) {
+				margin-bottom: 0;
+			}
+		}
+
+		.mobile_menu {
+			z-index: 2;
+			display: none;
+			position: absolute;
+			top: 57px;
+			left: 0;
+			background-color: #005c8b;
+			width: 270px;
+			padding-top: 16px;
+			ul {
+				margin-bottom: 14px;
+				li {
+					a {
+						display: block;
+						font-size: 16px;
+						font-weight: 500;
+						color: #fff;
+						padding-left: 30px;
+						padding-top: 7px;
+						padding-bottom: 7px;
+					}
+				}
+			}
+			.mobile_menu_geo {
+				background-color: #e4e4e4;
+				padding-bottom: 24px;
+				padding-left: 30px;
+				padding-right: 30px;
+				padding-top: 16px;
+				.geo {
+					flex-direction: column;
+					align-items: flex-start;
+					.geo_select {
+						border: 0;
+						margin-bottom: 6px;
+					}
+				}
+			}
+			#mobile_menu_email {
+				display: block;
+				margin-top: 14px;
+				font-size: 15px;
+				color: #4f636c;
+				text-decoration: underline;
+			}
+		}
+	}
+	.phones {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: calc(100% - 368px);
+		.phones_block {
+			p:nth-child(1) {
+				font-size: 16px;
+				margin-bottom: 4px;
+			}
+			p:nth-child(2) {
+				font-size: 11px;
+				font-weight: 300;
+			}
+			p {
+				span {
+					color: #005c8b;
+				}
+			}
+		}
+		.phones_block--1 {
+			margin-right: 30px;
+		}
+	}
+	.but_mobile_main_menu {
+		width: 248px;
+		height: 100%;
+		background: #005c8b url(../img/header/arrow_bottom2.png) no-repeat center right 22px;
+		display: flex;
+		align-items: center;
+		padding-left: 36px;
+		cursor: pointer;
+		position: relative;
+		p {
+			color: #fff;
+			font-size: 14px;
+			text-transform: uppercase;
+			font-weight: 500;
+			position: relative;
+			&:before {
+				position: absolute;
+				content: "";
+				width: 8px;
+				height: 8px;
+				top: 3px;
+				left: -15px;
+				background: url(../img/slider/main_menu_img.png);
+			}
+		}
+		ul {
+			width: 248px;
+			display: none;
+			flex-direction: column;
+			position: absolute;
+			left: 0;
+			bottom: -242px;
+			z-index: 2;
+			li {
+				background-color: #005c8b;
+				border-top: 1px solid #87d6e7;
+				a {
+					display: block;
+					font-size: 14px;
+					font-weight: 500;
+					color: #fff;
+					text-transform: uppercase;
+					padding: 14px 0;
+					padding-left: 36px;
+					position: relative;
+					&:before {
+						position: absolute;
+						content: "";
+						width: 8px;
+						height: 8px;
+						top: 17px;
+						left: 21px;
+						background: url(../img/slider/main_menu_img.png);
+					}
+				}
+			}
+		}
+	}
+	.but_mobile_callback {
+		height: 100%;
+		width: 60px;
+		cursor: pointer;
+		background: #c11e2f url(../img/header/tel.png) no-repeat center;
+	}
+}
+
+.header_wrapper_mobile {
+	display: none;
+}

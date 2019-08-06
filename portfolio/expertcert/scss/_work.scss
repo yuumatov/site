@@ -1,0 +1,134 @@
+.work {
+	width: 100%;
+	height: auto;
+	background: url(../img/work/bg.png) no-repeat center;
+	background-size: cover;
+	padding-top: 40px;
+	padding-bottom: 58px;
+	.slick-list {
+		width: 100%;
+	}
+	.slick-track {
+		display: flex;
+		align-items: stretch;
+		padding-top: 100px;
+		padding-bottom: 20px;
+	}
+	.slick-slide {
+		height: auto;
+	}
+	.slid_prev {
+		display: none;
+		margin-left: 15px;
+		background: url(../img/team/arrow_left.png);
+	}
+	.slid_next {
+		display: none;
+		margin-right: 15px;
+		background: url(../img/team/arrow_right.png);
+	}
+}
+
+.work_title {
+	display: flex;
+	justify-content: center;
+	h1 {
+		font-size: 25px;
+		font-weight: 500;
+		color: #fff;
+	}
+}
+
+.work_wrapper {
+	display: flex;
+	align-items: stretch;
+}
+
+.work_block {
+	width: calc(25% - 22.5px);
+	background-color: #3883a9;
+	margin: 0 30px;
+	position: relative;
+	&:nth-child(1) {
+		margin-left: 0;
+	}
+	&:last-child {
+		margin-right: 0;
+	}
+	p {
+		color: #fff;
+		font-size: 16px;
+		text-align: center;
+		padding-top: 80px;
+		padding-bottom: 40px;
+		padding-left: 24px;
+		padding-right: 24px;
+		line-height: 1.4em;
+		span {
+			text-transform: uppercase;
+			font-weight: 500;
+		}
+	}
+}
+
+.work_block_graph {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.work_block_border {
+	position: absolute;
+	width: calc(100% - 20px);
+	height: calc(100% - 20px);
+	margin: 10px;
+	border: 1px solid #78b7d0;
+	&:after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 1px;
+		background: linear-gradient(90deg, #78b7d0 0%, #3883a9 25%, #3883a9 50%, #3883a9 75%, #78b7d0 100%);
+		top: -1px;
+	}
+}
+
+.work_block_ico {
+	position: absolute;
+	top: -60px;
+	z-index: 10;
+	left: calc(50% - 60px)
+}
+
+.work_block_circle {
+	width: 90px;
+	height: 90px;
+	background-color: #fff;
+	border-radius: 45px;
+	margin: 15px;
+	box-shadow: 0px 0px 0px 15px rgba(255,255,255,.15);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.work_block_ico2 {
+	position: absolute;
+	bottom: -18px;
+	left: calc(50% - 18px);
+	z-index: 10;
+}
+
+.work_block_circle2 {
+	width: 32px;
+	height: 32px;
+	background-color: #c11e2f;
+	border-radius: 16px;
+	margin: 5px;
+	box-shadow: 0px 0px 0px 5px rgb(255,255,255);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	color: #fff;
+}

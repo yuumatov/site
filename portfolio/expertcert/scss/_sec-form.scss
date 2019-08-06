@@ -1,0 +1,119 @@
+.sec-form {
+	width: 100%;
+	height: auto;
+	padding: 45px 0;
+	background: url(../img/sec-form/bg.png) no-repeat center;
+	background-size: cover;
+	h1 {
+		font-size: 25px;
+		font-weight: 600;
+		color: #42b3ed;
+		text-align: center;
+		margin-bottom: 14px;
+	}
+	p {
+		font-size: 18px;
+		font-weight: 300;
+		color: #fff;
+		text-align: center;
+		line-height: 1.6em;
+		margin-bottom: 24px;
+	}
+}
+
+.wrapper_form_2 {
+	display: flex;
+	justify-content: space-between;
+	overflow: hidden;
+}
+
+.form_2 {
+	font-size: 0;
+	display: flex;
+	align-items: center;
+	input {
+		outline: none;
+		border: 2px solid #87d6e7;
+		border-right: 0;
+		background-color: transparent;
+		font-size: 15px;
+		font-weight: 300;
+		padding: 12px;
+		padding-right: 40px;
+		color: #fff;
+		max-width: 196px;
+	}
+	input::-webkit-input-placeholder {
+		color: #fff;
+	}
+	input:-moz-placeholder {
+		color: #fff;
+	}
+	input[type="text"] {
+		background: url(../img/slider/name.png) no-repeat center right 15px;
+	}
+	input[type="tel"] {
+		background: url(../img/slider/phone.png) no-repeat center right 15px;
+	}
+	input[type="email"] {
+		background: url(../img/slider/email.png) no-repeat center right 15px;
+	}
+	select {
+		display: block;
+		width: 275px;
+		outline: none;
+		border: 2px solid #87d6e7;
+		border-right: 2px solid #87d6e7;
+		border-left: 2px solid #87d6e7;
+		background-color: transparent;
+		font-size: 15px;
+		font-weight: 300;
+		color: #fff;
+		padding: 12px;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		background: url(../img/slider/arrow.png) no-repeat center right 15px;
+		option:nth-child(1) {
+			display: none;
+		}
+		option {
+			color: #000;
+		}
+	}
+}
+
+.form_2_submit {
+	height: 100%;
+	width: 260px;
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	p {
+		background: url(../img/slider/submit_img.png) no-repeat center left;
+		background-size: 28px auto;
+		z-index: 2;
+		padding-left: 45px;
+		padding-top: 10px;
+		padding-bottom: 11px;
+		font-size: 15px;
+		text-transform: uppercase;
+		font-weight: 500;
+		margin: 0;
+	}
+}
+
+.form_2_submit_bg {
+	position: absolute;
+	bottom: -74px;
+	right: 0;
+	width: 300px;
+	height: 300px;
+	background-color: #c11e2f;
+	transform: rotate(45deg);
+	z-index: 1;
+}

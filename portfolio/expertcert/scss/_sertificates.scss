@@ -1,0 +1,37 @@
+.sertificates {
+	width: 100%;
+	height: auto;
+	padding: 35px 0;
+	h1 {
+		font-size: 25px;
+		font-weight: 500;
+		color: #005c8b;
+		text-align: center;
+		margin-bottom: 12px;
+	}
+	.wrapper_slid {
+		.slid_2 {
+			padding: 0 50px;
+			.slid_items {
+				margin: 0 50px;
+				.slid_items_wrapper {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					img {
+						margin-bottom: 20px;
+						box-shadow: 0px 3px 14px -1px rgba(0,0,0,0.31);
+					}
+					p {
+						font-size: 15px;
+						color: #434242;
+					}
+				}
+			}
+		}
+	}
+}
+
+.sertificates_dots {
+	margin-bottom: 30px;
+}
