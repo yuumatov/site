@@ -1,0 +1,1149 @@
+body {
+    font-family: 'Museo Sans Cyrl 300';
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+
+.container {
+    max-width: 1186px;
+    padding: 0 26px;
+    height: auto;
+    margin: auto;
+}
+
+.content {
+    padding-top: 196px;
+    padding-bottom: 100px;
+    &_background {
+        background-color: #FDFDFD;
+        padding-bottom: 56px;
+        margin-bottom: -100px;
+        .container {
+            transform: translateY(-48px);
+        }
+    }
+}
+
+.header {
+    width: 100%;
+    background-color: #fff;
+    height: 100px;
+    border-bottom: 1px solid #F1F1F1;
+    position: fixed;
+    z-index: 99;
+    .container {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    &_logo {
+        margin-right: 30px;
+        img {
+            width: 164px;
+        }
+    }
+    &_date {
+        width: auto;
+        height: 28px;
+        background-color: #29262A;
+        border-radius: 2px;
+        color: #fff;
+        font-size: 14px;
+        padding-left: 44px;
+        padding-right: 20px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        &:before {
+            content: '';
+            width: 14px;
+            height: 12px;
+            background: url('../img/calendar.svg');
+            background-size: 100%;
+            position: absolute;
+            left: 20px;
+            top: 8px;
+        }
+    }
+    &_menu {
+        margin-left: auto;
+        ul {
+            display: flex;
+            li {
+                margin-right: 40px;
+                &:last-child {
+                    margin-right: 0;
+                }
+                a {
+                    color: #29262A;
+                    font-size: 18px;
+                    position: relative;
+                    &:before {
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 0.2px;
+                        content: '';
+                        background-color: #644EEE;
+                        opacity: 0;
+                        transition: 0.3s;
+                    }
+                    &:hover,
+                    &.active {
+                        &:before {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .button-mobile-menu {
+        width: 35px;
+        height: 30px;
+        background: url('../img/burger-menu.svg');
+        background-size: 100%;
+        margin-left: auto;
+        display: none;
+        cursor: pointer;
+        &.open {
+            width: 30px;
+            height: 30px;
+            background: url('../img/close.svg');
+            background-size: 100%;
+        }
+    }
+}
+
+.horoscope {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    color: #29262A;
+    position: relative;
+    margin-bottom: 100px;
+    &_header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-bottom: 62px;
+        &_zodiac {
+            width: 100px;
+            height: 100px;
+            background-color: #F9F9F9;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 50%;
+            margin-right: 24px;
+        }
+        &_meta {
+            color: #29262A;
+            &_name {
+                font-family: 'Museo Sans Cyrl 500';
+                font-size: 22px;
+                line-height: 26px;
+                margin-bottom: 10px;
+            }
+            &_date {
+                font-size: 18px;
+                line-height: 22px;
+            }
+        }
+    }
+    input[type="radio"] {
+        display: none;
+    }
+    label {
+        border: 1px solid #644EEE;
+        border-radius: 5px;
+        color: #29262A;
+        cursor: pointer;
+        background-color: #fff;
+        &:hover {
+            background-color: #F9F8FE;
+        }
+    }
+    &_day {
+        width: calc(50% - 15px);
+        display: none;
+        &_select {
+            display: flex;
+            margin-bottom: 30px;
+            &_label {
+                width: 180px;
+                height: 44px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 18px;
+                &:nth-child(1) {
+                    border-radius: 3px 0 0 3px;
+                }
+                &:nth-child(2) {
+                    border-radius: 0 3px 3px 0;
+                }
+            }
+        }
+        &_content {
+            display: none;
+            h3 {
+                font-size: 24px;
+                line-height: 29px;
+                margin-bottom: 24px;
+            }
+            p {
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 24px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &_type {
+        width: calc(50% - 15px);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &_label {
+            width: calc(50% - 15px);
+            height: 70px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            font-size: 18px;
+            font-family: 'Museo Sans Cyrl 500';
+            &_zodiac {
+                width: 40px;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 26px;
+                .svg_zodiac {
+                    fill: #644EEE;
+                    object-fit: contain;
+                }
+            }
+            span {
+                max-width: 112px;
+            }
+        }
+    }
+
+    .decore1,
+    .decore2 {
+        position: absolute;
+        opacity: 0.8;
+        z-index: -1;
+    }
+    .decore1 {
+        left: -154px;
+        bottom: -56px;
+    }
+    .decore2 {
+        right: -156px;
+        top: 0;
+    }
+
+    #t1:checked + #d1,
+    #t1d1:checked ~ #bt1d1,
+    #t1d2:checked ~ #bt1d2,
+    #t2:checked + #d2,
+    #t2d1:checked ~ #bt2d1,
+    #t2d2:checked ~ #bt2d2,
+    #t3:checked + #d3,
+    #t3d1:checked ~ #bt3d1,
+    #t3d2:checked ~ #bt3d2,
+    #t4:checked + #d4,
+    #t4d1:checked ~ #bt4d1,
+    #t4d2:checked ~ #bt4d2,
+    #t5:checked + #d5,
+    #t5d1:checked ~ #bt5d1,
+    #t5d2:checked ~ #bt5d2,
+    #t6:checked + #d6,
+    #t6d1:checked ~ #bt6d1,
+    #t6d2:checked ~ #bt6d2,
+    #t7:checked + #d7,
+    #t7d1:checked ~ #bt7d1,
+    #t7d2:checked ~ #bt7d2,
+    #t8:checked + #d8,
+    #t8d1:checked ~ #bt8d1,
+    #t8d2:checked ~ #bt8d2 {
+        display: block;
+    }
+    #t1:checked ~ .horoscope_type #label1,
+    #t2:checked ~ .horoscope_type #label2,
+    #t3:checked ~ .horoscope_type #label3,
+    #t4:checked ~ .horoscope_type #label4,
+    #t5:checked ~ .horoscope_type #label5,
+    #t6:checked ~ .horoscope_type #label6,
+    #t7:checked ~ .horoscope_type #label7,
+    #t8:checked ~ .horoscope_type #label8 {
+        background-color: #644EEE;
+        color: #fff;
+        .svg_zodiac {
+            fill: white;
+        }
+    }
+    #t1d1:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(1),
+    #t1d2:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(2),
+    #t2d1:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(1),
+    #t2d2:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(2),
+    #t3d1:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(1),
+    #t3d2:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(2),
+    #t4d1:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(1),
+    #t4d2:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(2),
+    #t5d1:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(1),
+    #t5d2:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(2),
+    #t6d1:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(1),
+    #t6d2:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(2),
+    #t7d1:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(1),
+    #t7d2:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(2),
+    #t8d1:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(1),
+    #t8d2:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(2) {
+        background-color: #644EEE;
+        color: #fff;
+    }
+}
+
+.zodiac {
+    &_list {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 110px;
+        &_item {
+            color: #29262A;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            a {
+                color: #29262A;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                &:hover {
+                    .zodiac_list_item_img {
+                        background-color: #fff;
+                        border: 3px solid #094BB0;
+                    }
+                }
+            }
+            &_img {
+                width: 64px;
+                height: 64px;
+                background-color: #F9F9F9;
+                border: 3px solid #F9F9F9;
+                border-radius: 50%;
+                background-repeat: no-repeat;
+                background-size: 50%;
+                background-position: center;
+                margin-bottom: 15px;
+                transition: 0.3s;
+            }
+            &_name {
+                font-family: 'Museo Sans Cyrl 500';
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 7px;
+            }
+            &_date {
+                font-size: 12px;
+                line-height: 14px;
+            }
+        }
+    }
+}
+
+.home {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 165px;
+    position: relative;
+    &_content {
+        width: 456px;
+        color: #29262A;
+        &_title {
+            font-family: 'Montserrat';
+            font-weight: 400;
+            font-size: 36px;
+            line-height: 44px;
+            margin-bottom: 72px;
+        }
+        &_description {
+            font-family: 'Montserrat';
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            margin-bottom: 32px;
+        }
+        .horoscopeall {
+            input[type="radio"] {
+                display: none;
+            }
+            display: flex;
+            flex-direction: column;
+            &_select {
+                order: 1;
+                display: flex;
+                margin-bottom: 56px;
+                label {
+                    width: calc(100% / 3);
+                    height: 44px;
+                    background-color: #fff;
+                    border: 0.5px solid #644EEE;
+                    cursor: pointer;
+                    font-size: 18px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    &:hover {
+                        background-color:#F9F8FE;
+                    }
+                    &:nth-child(1) {
+                        border-radius: 3px 0 0 3px;
+                        border-right: 0;
+                    }
+                    &:nth-child(3) {
+                        border-left: 0;
+                        border-radius: 0 3px 3px 0;
+                    }
+                }
+            }
+            &_body {
+                display: none;
+                order: 2;
+                p {
+                    font-size: 18px;
+                    line-height: 22px;
+                    margin-bottom: 24px;
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        #h1:checked + #h1b,
+        #h2:checked + #h2b,
+        #h3:checked + #h3b {
+            display: block;
+        }
+        #h1:checked ~ .horoscopeall_select label:nth-child(1),
+        #h2:checked ~ .horoscopeall_select label:nth-child(2),
+        #h3:checked ~ .horoscopeall_select label:nth-child(3) {
+            background-color: #644EEE;
+            color: white;
+        }
+    }
+    &_zodiac {
+        width: 582px;
+        &_list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            &_item {
+                width: calc(100% / 3 - 66.6666px);
+                margin: 0 33.3333px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 32px;
+                a {
+                    color: #29262A;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    &:hover {
+                        .home_zodiac_list_item_img {
+                            background-color: #fff;
+                            border: 3px solid #094BB0;
+                        }
+                    }
+                }
+                &_img {
+                    width: 100px;
+                    height: 100px;
+                    background-color: #F9F9F9;
+                    border: 3px solid #F9F9F9;
+                    border-radius: 50%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 50%;
+                    transition: 0.3s;
+                    margin-bottom: 24px;
+                }
+                &_name {
+                    font-size: 22px;
+                    line-height: 26px;
+                    margin-bottom: 10px;
+                    font-family: 'Museo Sans Cyrl 500';
+                }
+                &_date {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+    .decore1,
+    .decore2 {
+        position: absolute;
+        opacity: 0.8;
+        z-index: -1;
+    }
+    .decore1 {
+        left: -154px;
+        bottom: -160px;
+    }
+    .decore2 {
+        right: -120px;
+        top: -160px;
+    }
+}
+
+.horoscope,
+.zodiac,
+.home {
+    .z1 {background-image: url('../img/horoscope/z1.svg');}
+    .z2 {background-image: url('../img/horoscope/z2.svg');}
+    .z3 {background-image: url('../img/horoscope/z3.svg');}
+    .z4 {background-image: url('../img/horoscope/z4.svg');}
+    .z5 {background-image: url('../img/horoscope/z5.svg');}
+    .z6 {background-image: url('../img/horoscope/z6.svg');}
+    .z7 {background-image: url('../img/horoscope/z7.svg');}
+    .z8 {background-image: url('../img/horoscope/z8.svg');}
+    .z9 {background-image: url('../img/horoscope/z9.svg');}
+    .z10 {background-image: url('../img/horoscope/z10.svg');}
+    .z11 {background-image: url('../img/horoscope/z11.svg');}
+    .z12 {background-image: url('../img/horoscope/z12.svg');}
+}
+
+.news {
+    color: #29262A;
+    &_title {
+        font-weight: 300;
+        font-family: 'Montserrat';
+        font-size: 36px;
+        position: relative;
+        padding-left: 52px;
+        margin-bottom: 57px;
+        &:before {
+            width: 32px;
+            height: 31px;
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 4px;
+            background: url('../img/news.svg');
+        }
+    }
+    &_wrap {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &_block {
+            width: calc(100% / 4 - 3px);
+            height: auto;
+            margin-bottom: 24px;
+            padding: 13px;
+            border-radius: 3px;
+            z-index: 1;
+            transition: 0.3s;
+            &:hover {
+                background-color: #fff;
+                box-shadow: 0px 0px 20px #F1F1F1;
+                z-index: 2;
+            }
+            &_preview {
+                width: 100%;
+                height: 158px;
+                background-size: cover;
+                border-radius: 3px;
+                margin-bottom: 24px;
+            }
+            &_title {
+                color: #29262A;
+                font-family: 'Montserrat';
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 22px;
+                margin-bottom: 24px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                min-height: 66px;
+                max-height: 66px;
+                display: block;
+            }
+            &_preview-text {
+                font-size: 15px;
+                line-height: 18px;
+                margin-bottom: 24px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                min-height: 72px;
+                max-height: 66px;
+            }
+        }
+    }
+}
+
+.pagination {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    ul {
+        display: flex;
+        li {
+            margin-right: 8px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    &_block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        background-color: #fff;
+        border: 1px solid #F9F9F9;
+        border-radius: 2px;
+        transition: 0.3s;
+        font-size: 14px;
+        font-family: 'Museo Sans Cyrl 500';
+        color: #595959;
+        &:hover,
+        &.active {
+            background-color: #644EEE;
+            border: 1px solid #644EEE;
+            color: #fff;
+            .pagination_arrow {
+                fill: #ffffff;
+                opacity: 1;
+            }
+        }
+        &__arrow {
+            border: 1px solid #644EEE;
+        }
+    }
+    &_arrow {
+        opacity: 0.65;
+        transition: 0.3s;
+        &__right {
+            transform: rotate(180deg);
+        }
+    }
+}
+
+.article {
+    width: 100%;
+    height: auto;
+    color: #29262A;
+    display: flex;
+    flex-wrap: wrap;
+    h1 {
+        font-family: 'Montserrat';
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 44px;
+        margin-top: 72px;
+        margin-bottom: 92px;
+    }
+    h2 {
+        font-family: 'Montserrat';
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 37px;
+        margin-top: 56px;
+        margin-bottom: 32px;
+    }
+    h3 {
+        font-family: 'Montserrat';
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 29px;
+        margin-top: 56px;
+        margin-bottom: 32px;
+        blockquote {
+            font-family: 'Museo Sans Cyrl 500';
+            font-size: 24px;
+            line-height: 29px;
+            margin-top: 0;
+            margin-bottom: 72px;
+            padding: 28px 24px;
+            background: #644EEE;
+            border-radius: 5px;
+            color: #fff;
+        }
+        &.footnote {
+            font-family: 'Museo Sans Cyrl 500';
+            font-size: 30px;
+            line-height: 36px;
+            color: #644EEE;
+            padding: 34px 26px;
+            margin-top: 0;
+            margin-bottom: 32px;
+            border-radius: 5px;
+            border: 5px solid #644EEE;
+        }
+    }
+    blockquote {
+        font-family: 'Museo Sans Cyrl 500';
+        font-size: 24px;
+        line-height: 29px;
+        margin-top: 0;
+        margin-bottom: 72px;
+        padding: 28px 24px;
+        background: #644EEE;
+        border-radius: 5px;
+        color: #fff;
+    }
+    p {
+        font-size: 18px;
+        line-height: 22px;
+        margin-bottom: 24px;
+        a {
+            font-family: 'Museo Sans Cyrl 500';
+            color: #094BB0;
+            text-decoration: underline;
+            transition: 0.3s;
+            &:hover {
+                opacity: 0.7;
+            }
+        }
+    }
+    ul {
+        margin-bottom: 32px;
+        padding-left: 100px;
+        li {
+            font-size: 15px;
+            line-height: 18px;
+            padding-left: 50px;
+            margin-bottom: 30px;
+            position: relative;
+            &:before {
+                content: '—';
+                font-family: 'Montserrat';
+                font-weight: 500;
+                font-size: 30px;
+                line-height: 37px;
+                position: absolute;
+                top: -11px;
+                left: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            a {
+                font-family: 'Museo Sans Cyrl 500';
+                color: #094BB0;
+                text-decoration: underline;
+                transition: 0.3s;
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+    ol {
+        margin-bottom: 32px;
+        counter-reset: num;
+        padding: 32px 48px;
+        background: #F9F9F9;
+        border-radius: 5px;
+        li {
+            font-size: 15px;
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 30px;
+            &:before {
+                content: counter(num);
+                counter-increment: num;
+                font-family: 'Montserrat';
+                font-weight: 500;
+                font-size: 30px;
+                line-height: 37px;
+                position: absolute;
+                top: -11px;
+                left: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+            a {
+                font-family: 'Museo Sans Cyrl 500';
+                color: #094BB0;
+                text-decoration: underline;
+                transition: 0.3s;
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+    img {
+        display: block;
+        max-width: 100%;
+        margin-bottom: 32px;
+        border-radius: 3px;
+    }
+    .line {
+        display: flex;
+        .footnote {
+            width: 358px;
+            margin-left: 30px;
+        }
+    }
+    .slider {
+        margin-top: 32px;
+        margin-bottom: 72px;
+        &_item {
+            width: 100%;
+            height: 390px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 3px;
+        }
+    }
+    &_header {
+        width: 100%;
+        height: 390px;
+        background-size: cover;
+        position: relative;
+        padding: 30px;
+        display: flex;
+        align-items: flex-end;
+        border-radius: 3px;
+        overflow: hidden;
+        margin-bottom: 56px;
+        h1 {
+            margin: 0;
+            max-width: 820px;
+            color: #fff;
+            z-index: 2;
+        }
+        &_gradient {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 56.56%, #29262A 100%);
+            z-index: 1;
+        }
+    }
+    &_content {
+        width: calc(100% - 290px);
+        height: auto;
+        margin-bottom: 140px;
+    }
+    &_share {
+        width: 260px;
+        height: auto;
+        margin-left: 30px;
+        margin-top: 16px;
+        margin-bottom: 164px;
+        position: sticky;
+        align-self: flex-start;
+        top: 172px;
+        &_title {
+            font-family: 'Museo Sans Cyrl 500';
+            margin-bottom: 25px;
+        }
+        &_wrap {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        &_block {
+            width: calc(50% - 9px);
+            height: 44px;
+            display: flex;
+            align-items: center;
+            border: 1px solid #644EEE;
+            border-radius: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            &:nth-child(1) {
+                margin-bottom: 20px;
+            }
+            &:hover {
+                background-color: rgba(#644EEE, 0.04);
+            }
+            &_img {
+                width: 28px;
+                height: 28px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                margin-right: 8px;
+                &__fb {
+                    background-image: url('../img/fb.svg');
+                }
+                &__ok {
+                    background-image: url('../img/ok.svg');
+                }
+                &__tw {
+                    background-image: url('../img/tw.svg');
+                }
+                &__vk {
+                    background-image: url('../img/vk.svg');
+                }
+            }
+            span {
+                font-family: 'Museo Sans Cyrl 500';
+                color: #094BB0;
+            }
+        }
+    }
+}
+
+.subscription {
+    width: 940px;
+    padding: 26px 0;
+    margin: auto;
+    margin-bottom: 96px;
+    margin-top: 48px;
+    background-color: #fff;
+    box-shadow: 0px 4px 20px #F1F1F1;
+    border-radius: 5px;
+    &.subscription_home {
+        margin-bottom: 70px;
+    }
+    form {
+        width: 746px;
+        height: 44px;
+        display: flex;
+        margin: auto;
+        .select {
+            width: 228px;
+            border: 1px solid #644EEE;
+            border-right: 0;
+            outline: none;
+            position: relative;
+            cursor: pointer;
+            user-select: none;
+            color: #29262A;
+            &:hover,
+            &:focus {
+                background-color: rgba(#644EEE, 0.04);
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                width: 12px;
+                height: 8px;
+                background: url('../img/select-arrow.svg') no-repeat;
+                background-size: cover;
+                right: 15px;
+                top: calc(50% - 4px);
+                transition: 0.3s;
+            }
+            &_text {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                padding-left: 14px;
+            }
+            &:focus {
+                .select_dropdown {
+                    display: block;
+                }
+                &:after {
+                    transform: rotate(180deg);
+                }
+            }
+            &_dropdown {
+                position: absolute;
+                top: 100%;
+                left: -1px;
+                right: -1px;
+                list-style-type: none;
+                box-shadow: -5px 10px 10px rgba(100, 78, 238, 0.2);
+                border: 1px solid #644EEE;
+                background-color: #fff;
+                display: none;
+                z-index: 3;
+            }
+            &_option {
+                height: 29px;
+                padding-left: 15px;
+                border-bottom: 0.5px solid #644EEE;
+                display: flex;
+                align-items: center;
+                &:last-child {
+                    border-bottom: 0;
+                }
+                &:hover {
+                    font-family: 'Museo Sans Cyrl 500';
+                    text-decoration: underline;
+                }
+            }
+        }
+        input[type="email"] {
+            font-family: 'Museo Sans Cyrl 300';
+            width: 258px;
+            padding: 0 24px;
+            border: 1px solid #644EEE;
+            border-right: 0;
+            outline: none;
+            color: #29262A;
+            font-size: 16px;
+            &:hover,
+            &:focus {
+                background-color: rgba(#644EEE, 0.04);
+            }
+            &::-moz-placeholder {color: #29262A;}
+            &::-webkit-input-placeholder {color: #29262A;}
+            &:-ms-input-placeholder {color: #29262A;}
+            &::-ms-input-placeholder {color: #29262A;}
+            &::placeholder {color: #29262A;}
+        }
+        input[type="submit"] {
+            font-family: 'Museo Sans Cyrl 300';
+            background-color: #644EEE;
+            border: 0;
+            border-radius: 0 3px 3px 0;
+            font-size: 16px;
+            width: 260px;
+            color: #fff;
+            font-family: 'Museo Sans Cyrl 500';
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover {
+                background-color: rgba(#644EEE, 0.7);
+            }
+        }
+    }
+}
+
+.footer,
+.mobile-menu_footer {
+    width: 100%;
+    padding: 28px 0;
+    background-color:#094BB0;
+    &_head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 28px;
+        &_logo {
+            width: 164px;
+        }
+        &_menu {
+            ul {
+                display: flex;
+                li {
+                    margin-right: 40px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    a {
+                        font-family: 'Museo Sans Cyrl 500';
+                        font-size: 18px;
+                        color: #fff;
+                        transition: 0.3s;
+                        &:hover {
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &_body {
+        display: flex;
+        justify-content: space-between;
+        &_copyright {
+            font-size: 15px;
+            max-width: 450px;
+            color: #fff;
+            line-height: 18px;
+        }
+        &_info {
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            font-size: 15px;
+            span {
+                text-align: right;
+                a {
+                    color: #fff;
+                    font-family: 'Museo Sans Cyrl 500';
+                    text-decoration: underline;
+                    transition: 0.3s;
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+            &_rights {
+                margin-bottom: 35px;
+            }
+        }
+    }
+}
+
+.mobile-menu {
+    display: none;
+    background-color: #fff;
+    width: 100%;
+    height: calc(100% - 100px);
+    position: fixed;
+    top: 100px;
+    overflow-y: auto;
+    z-index: 99;
+    &_nav {
+        padding-top: 30px;
+        padding-bottom: 68px;
+        span {
+            font-family: 'Montserrat';
+            font-size: 33px;
+            font-weight: 500;
+            text-transform: uppercase;
+            margin-bottom: 70px;
+            display: block;
+            color: #29262A;
+        }
+        ul {
+            li {
+                margin-bottom: 22px;
+                a {
+                    font-family: 'Montserrat';
+                    font-size: 33px;
+                    font-weight: 300;
+                    color: #29262A;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                    margin-top: 36px;
+                    a {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+    &_footer {
+        padding-top: 28px;
+        padding-bottom: 40px;
+        .footer_head {
+            margin-bottom: 50px;
+            &_logo {
+                width: 164px;
+            }
+        }
+        .footer_body {
+            &_info {
+                font-size: 18px;
+            }
+        }
+    }
+}

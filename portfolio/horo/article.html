@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Horo – Статья</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Скрипт для адаптирования под мобильные устройства -->
+    <script>
+        var metaTag=document.createElement('meta');
+        metaTag.name = "viewport";
+        if (screen.width <= 479) {
+            metaTag.content = "width=480, user-scalable=false"
+            window.addEventListener("orientationchange", function() {
+                viewport = document.querySelector("meta[name=viewport]");
+                if(window.orientation === 90 || window.orientation === -90){
+                    viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=false');
+                } else{
+                    viewport.setAttribute('content', 'width=480, user-scalable=false');
+                };
+            }, false);
+        } else{
+            metaTag.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=false"
+        };
+        document.getElementsByTagName('head')[0].appendChild(metaTag);
+    </script>
+</head>
+<body>
+    <!-- .header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="header_logo"><img src="img/logo.svg" alt="Horo"></a>
+            <div class="header_date">27 июня / 2019</div>
+            <nav class="header_menu">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="articles.html">Статьи</a></li>
+                    <li><a href="#">En</a></li>
+                </ul>
+            </nav>
+            <span class="button-mobile-menu"></span>
+        </div>
+    </header>
+    <!-- /.header -->
+
+    <!-- .mobile-menu -->
+    <div class="mobile-menu">
+        <nav class="mobile-menu_nav">
+            <div class="container">
+                <span>Menu</span>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="articles.html">Статьи</a></li>
+                    <li><a href="#">En</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="mobile-menu_footer">
+            <div class="container">
+                <div class="footer_head">
+                    <img class="footer_head_logo" src="img/logo-footer.svg" alt="Horo">
+                </div>
+                <div class="footer_body">
+                    <div class="footer_body_copyright">© 2019, HORO.ua - гороскоп на сегодня, завтра, неделю. <br> Все права защищены. Любая перепечатка разрешается только с использованием активной индексируемой ссылки на сам материал или на главную страницу.</div>
+                    <div class="footer_body_info">
+                        <span class="footer_body_info_rights">All rights reserved</span>
+                        <span>Дизайн сделал<br><a href="#">Bocharov</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.mobile-menu -->
+
+    <!-- .content -->
+    <main class="content">
+
+        <div class="container">
+            <!-- .article -->
+            <article class="article">
+
+                <div class="article_header" style="background-image: url('img/post/header-article.png')">
+                    <h1>H1. Гороскоп в помощь: как «приручить» разные знаки зодиака?</h1>
+                    <div class="article_header_gradient"></div>
+                </div>
+
+                <!-- .article_content -->
+                <div class="article_content">
+                    <p>Вы подсмеиваетесь над теми людьми, которые даже из дому не выходят, не изучив <a href="#">гороскоп на сегодня</a>?</p>
+                    <p>Мы не призываем вас безоговорочно верить всему, что вещают астрологи, но рекомендуем обратить внимание на особенности, присущие отдельным знакам зодиака. Такие знания могут оказаться очень кстати, если не складываются отношения с коллегами по работе или с соседями. Практика показывает: у людей, родившихся под одним и тем же созвездием, действительно есть схожие черты и привычки, и, учитывая эти особенности, можно найти общий язык и избегать нежелательных конфликтов.</p>
+
+                    <ul>
+                        <h2>H2 Заголовок маркерованного списка</h2>
+                        <li>Ваш начальник относится к огненным знакам? Это яркое трио включает Львов, Овнов и Стрельцов — людей страстных и темпераментных. Будьте готовы к тому, что такие руководители быстро «заводятся», поэтому любая промашка с вашей стороны обернется бурными разбирательствами. В свою очередь, «огненное» начальство достаточно отходчиво — повинившись в своей оплошности, вы быстро получите прощение. Если среди ваших подчиненных есть Львы, Стрельцы и Овны, вам повезло: это активные, деятельные и творческие сотрудники с огромной энергией.</li>
+                        <li>Тельцы, Девы и Козероги — одни из самых дисциплинированных и консервативных личностей. Это земляные <a href="#">знаки зодиака</a>, которые предпочитают стабильность и недолюбливают новшества. Не удивляйтесь, что они негативно отнесутся к предложенным изменениям на работе или в семье, но в трудные времена на них всегда можно положиться.</li>
+                        <li>Ваши эмоциональные соседи, скорее всего, принадлежат к водным знакам. Рыбы, Раки и Скорпионы отличаются гиперчувствительностью, поэтому не удивляйтесь их бурной реакции по любому малейшему поводу. Чтобы подружиться с ними, найдите время для дружеской беседы — водные знаки любят поговорить по душам. Кроме того, знаки воды обычно отличаются очень хорошей интуицией и, возможно, помогут вам найти выход из непростой ситуации.</li>
+                        <li>Одни из самых дружелюбных и открытых — представители воздушных знаков. Весы, Близнецы и Водолеи, как правило, быстро находят общий язык с окружающими — это прекрасные дипломаты. Помимо этого, они зачастую наделены хорошими аналитическими способностями. К таким людям всегда можно обратиться за советом — они не оставят без помощи и поддержки.</li>
+                    </ul>
+                    <p>У нас не всегда есть возможность выбирать себе подходящее окружение. Но, зная сильные и слабые места разных людей, вы сможете наладить нормальные взаимоотношения.</p>
+                    <p>Вы подсмеиваетесь над теми людьми, которые даже из дому не выходят, не изучив <a href="#">гороскоп на сегодня</a>?</p>
+                    <p>Мы не призываем вас безоговорочно верить всему, что вещают астрологи, но рекомендуем обратить внимание на особенности, присущие отдельным знакам зодиака. Такие знания могут оказаться очень кстати, если не складываются отношения с коллегами по работе или с соседями. Практика показывает: у людей, родившихся под одним и тем же созвездием, действительно есть схожие черты и привычки, и, учитывая эти особенности, можно найти общий язык и избегать нежелательных конфликтов.</p>
+                    
+                    <h2>H2 Заголовок маркерованного списка</h2>
+                    <ol>
+                        <li>Ваш начальник относится к огненным знакам? Это яркое трио включает Львов, Овнов и Стрельцов — людей страстных и темпераментных. Будьте готовы к тому, что такие руководители быстро «заводятся», поэтому любая промашка с вашей стороны обернется бурными разбирательствами. В свою очередь, «огненное» начальство достаточно отходчиво — повинившись в своей оплошности, вы быстро получите прощение. Если среди ваших подчиненных есть Львы, Стрельцы и Овны, вам повезло: это активные, деятельные и творческие сотрудники с огромной энергией.</li>
+                        <li>Тельцы, Девы и Козероги — одни из самых дисциплинированных и консервативных личностей. Это земляные <a href="#">знаки зодиака</a>, которые предпочитают стабильность и недолюбливают новшества. Не удивляйтесь, что они негативно отнесутся к предложенным изменениям на работе или в семье, но в трудные времена на них всегда можно положиться.</li>
+                        <li>Ваши эмоциональные соседи, скорее всего, принадлежат к водным знакам. Рыбы, Раки и Скорпионы отличаются гиперчувствительностью, поэтому не удивляйтесь их бурной реакции по любому малейшему поводу. Чтобы подружиться с ними, найдите время для дружеской беседы — водные знаки любят поговорить по душам. Кроме того, знаки воды обычно отличаются очень хорошей интуицией и, возможно, помогут вам найти выход из непростой ситуации.</li>
+                        <li>Одни из самых дружелюбных и открытых — представители воздушных знаков. Весы, Близнецы и Водолеи, как правило, быстро находят общий язык с окружающими — это прекрасные дипломаты. Помимо этого, они зачастую наделены хорошими аналитическими способностями. К таким людям всегда можно обратиться за советом — они не оставят без помощи и поддержки.</li>
+                    </ol>
+
+                    <h2>H2 Гороскоп в помощь: как «приручить» разные знаки зодиака?</h2>
+                    <img src="img/post/img-article.png">
+                    <p>Вы подсмеиваетесь над теми людьми, которые даже из дому не выходят, не изучив <a href="#">гороскоп на сегодня</a>?</p>
+                    <p>Мы не призываем вас безоговорочно верить всему, что вещают астрологи, но рекомендуем обратить внимание на особенности, присущие отдельным знакам зодиака. Такие знания могут оказаться очень кстати, если не складываются отношения с коллегами по работе или с соседями. Практика показывает: у людей, родившихся под одним и тем же созвездием, действительно есть схожие черты и привычки, и, учитывая эти особенности, можно найти общий язык и избегать нежелательных конфликтов.</p>
+
+                    <div class="slider">
+                        <div class="slider_item" style="background-image: url('img/slider/image1.png')"></div>
+                        <div class="slider_item" style="background-image: url('img/slider/image2.png')"></div>
+                        <div class="slider_item" style="background-image: url('img/slider/image3.png')"></div>
+                    </div>
+
+                    <h3>H3. Сноска . Выделение</h3>
+                    <blockquote>H3. Ваш начальник относится к огненным знакам? Это яркое трио включает Львов, Овнов и Стрельцов — людей страстных и темпераментных. Будьте готовы к тому, что такие руководители быстро «заводятся», поэтому любая промашка с вашей стороны обернется бурными разбирательствами.</blockquote>
+                    <div class="line">
+                        <div class="column">
+                            <p>Вы подсмеиваетесь над теми людьми, которые даже из дому не выходят, не изучив <a href="#">гороскоп на сегодня</a>?</p>
+                            <p>Мы не призываем вас безоговорочно верить всему, что вещают астрологи, но рекомендуем обратить внимание на особенности, присущие отдельным знакам зодиака. Такие знания могут оказаться очень кстати, если не складываются отношения с коллегами по работе или с соседями. Практика показывает: у людей, родившихся под одним и тем же созвездием, действительно есть схожие черты и привычки, и, учитывая эти особенности, можно найти общий язык и избегать нежелательных конфликтов.</p>
+                        </div>
+                        <div class="column">
+                            <h3 class="footnote">H3. Ваш начальник относится к огненным знакам? Это яркое трио включает Львов, Овнов и Стрельцов — людей страстных и темпераментных.</h3>
+                        </div>
+                    </div>
+
+                    <h1>H1. Гороскоп в помощь: как «приручить» разные знаки зодиака?</h1>
+                    <p>Вы подсмеиваетесь над теми людьми, которые даже из дому не выходят, не изучив <a href="#">гороскоп на сегодня</a>?</p>
+                    <p>Мы не призываем вас безоговорочно верить всему, что вещают астрологи, но рекомендуем обратить внимание на особенности, присущие отдельным знакам зодиака. Такие знания могут оказаться очень кстати, если не складываются отношения с коллегами по работе или с соседями. Практика показывает: у людей, родившихся под одним и тем же созвездием, действительно есть схожие черты и привычки, и, учитывая эти особенности, можно найти общий язык и избегать нежелательных конфликтов.</p>
+                </div>
+                <!-- /.article_content -->
+
+                <!-- .article_share -->
+                <div class="article_share">
+                    <div class="article_share_title">Поделится</div>
+                    <div class="article_share_wrap">
+                        <a href="#" class="article_share_block">
+                            <div class="article_share_block_img article_share_block_img__fb"></div>
+                            <span>100</span>
+                        </a>
+                        <a href="#" class="article_share_block">
+                            <div class="article_share_block_img article_share_block_img__ok"></div>
+                            <span>4</span>
+                        </a>
+                        <a href="#" class="article_share_block">
+                            <div class="article_share_block_img article_share_block_img__tw"></div>
+                            <span>8</span>
+                        </a>
+                        <a href="#" class="article_share_block">
+                            <div class="article_share_block_img article_share_block_img__vk"></div>
+                            <span>0</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- /.article_share -->
+
+            </article>
+            <!-- /.article -->
+        </div>
+
+        <div class="content_background">
+            <div class="container">
+
+                <!-- .subscription -->
+                <article class="subscription">
+                    <form action="form.php" method="post">
+                        <div class="select" tabindex="1">
+                            <span class="select_text">Выберите знак зодиака</span>
+                            <input class="select_value" type="hidden" name="zodiac">
+                            <ul class="select_dropdown">
+                                <li class="select_option">Овен</li>
+                                <li class="select_option">Телец</li>
+                                <li class="select_option">Близнецы</li>
+                                <li class="select_option">Рак</li>
+                                <li class="select_option">Лев</li>
+                                <li class="select_option">Дева</li>
+                                <li class="select_option">Весы</li>
+                                <li class="select_option">Скорпион</li>
+                                <li class="select_option">Стрелец</li>
+                                <li class="select_option">Козерог</li>
+                                <li class="select_option">Водолей</li>
+                                <li class="select_option">Рыбы</li>
+                            </ul>
+                        </div>
+                        <input type="email" name="email" placeholder="E-mail" tabindex="2" required>
+                        <input type="submit" value="Подписаться на рассылку" tabindex="3">
+                    </form>
+                </article>
+                <!-- /.subscription -->
+
+                <!-- .news -->
+                <article class="news news_popular">
+                    <h1 class="news_title">Популярные новости</h1>
+                    <div class="news_wrap">
+
+                        <!-- .news_wrap_block -->
+                        <div class="news_wrap_block">
+                            <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img1.png')"></div>
+                            <a href="article.html" class="news_wrap_block_title">Бумажный шпагат, где и как его использовать</a>
+                            <div class="news_wrap_block_preview-text">Шпагат, он же бечёвка — это достаточно тонкая упаковочная нить. Чтобы сделать бумажный шпагат, нужно скрутить ...</div>
+                        </div>
+                        <!-- /.news_wrap_block -->
+
+                        <!-- repeat blocks .news_wrap_block -->
+                        <div class="news_wrap_block">
+                            <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img2.png')"></div>
+                            <a href="article.html" class="news_wrap_block_title">Зороастрийский гороскоп древнее и точнее китайского</a>
+                            <div class="news_wrap_block_preview-text">Китайский гороскоп из 12 животных считается менее точным, чем зороастрийский, поскольку в нем представлено 32 тотема ...</div>
+                        </div>
+                        <div class="news_wrap_block">
+                            <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img3.png')"></div>
+                            <a href="article.html" class="news_wrap_block_title">Профессиональная косметика: чем отличается от обычной?</a>
+                            <div class="news_wrap_block_preview-text">Любая женщина хочет всегда выглядеть безупречно и на это она тратит не только много своего времени, но и финансов.</div>
+                        </div>
+                        <div class="news_wrap_block">
+                            <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img4.png')"></div>
+                            <a href="article.html" class="news_wrap_block_title">Ментальная арифметика в Школе Соробан</a>
+                            <div class="news_wrap_block_preview-text">Предоставить детям возможность раскрыть и применить в жизни необыкновенный природный дар</div>
+                        </div>
+                        <!-- repeat blocks /.news_wrap_block -->
+                    </div>
+                </article>
+                <!-- /.news -->
+
+            </div>
+        </div>
+    </main>
+    <!-- /.content -->
+
+    <!-- .footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_head">
+                <img class="footer_head_logo" src="img/logo-footer.svg" alt="Horo">
+                <nav class="footer_head_menu">
+                    <ul>
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="articles.html">Статьи</a></li>
+                        <li><a href="#">En</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer_body">
+                <div class="footer_body_copyright">© 2019, HORO.ua - гороскоп на сегодня, завтра, неделю. <br> Все права защищены. Любая перепечатка разрешается только с использованием активной индексируемой ссылки на сам материал или на главную страницу.</div>
+                <div class="footer_body_info">
+                    <span class="footer_body_info_rights">All rights reserved</span>
+                    <span>Дизайн сделал<br><a href="#">Bocharov</a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /.footer -->
+
+    <!-- connecting scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/select.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- slick slider scripts -->
+    <script type="text/javascript">
+        $('.slider').slick({
+            
+        });
+    </script>
+</body>
+</html>

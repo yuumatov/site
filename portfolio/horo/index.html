@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Horo</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Скрипт для адаптирования под мобильные устройства -->
+    <script>
+        var metaTag=document.createElement('meta');
+        metaTag.name = "viewport";
+        if (screen.width <= 479) {
+            metaTag.content = "width=480, user-scalable=false"
+            window.addEventListener("orientationchange", function() {
+                viewport = document.querySelector("meta[name=viewport]");
+                if(window.orientation === 90 || window.orientation === -90){
+                    viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=false');
+                } else{
+                    viewport.setAttribute('content', 'width=480, user-scalable=false');
+                };
+            }, false);
+        } else{
+            metaTag.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=false"
+        };
+        document.getElementsByTagName('head')[0].appendChild(metaTag);
+    </script>
+</head>
+<body>
+    <!-- .header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="header_logo"><img src="img/logo.svg" alt="Horo"></a>
+            <div class="header_date">27 июня / 2019</div>
+            <nav class="header_menu">
+                <ul>
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="articles.html">Статьи</a></li>
+                    <li><a href="#">En</a></li>
+                </ul>
+            </nav>
+            <span class="button-mobile-menu"></span>
+        </div>
+    </header>
+    <!-- /.header -->
+
+    <!-- .mobile-menu -->
+    <div class="mobile-menu">
+        <nav class="mobile-menu_nav">
+            <div class="container">
+                <span>Menu</span>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="articles.html">Статьи</a></li>
+                    <li><a href="#">En</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="mobile-menu_footer">
+            <div class="container">
+                <div class="footer_head">
+                    <img class="footer_head_logo" src="img/logo-footer.svg" alt="Horo">
+                </div>
+                <div class="footer_body">
+                    <div class="footer_body_copyright">© 2019, HORO.ua - гороскоп на сегодня, завтра, неделю. <br> Все права защищены. Любая перепечатка разрешается только с использованием активной индексируемой ссылки на сам материал или на главную страницу.</div>
+                    <div class="footer_body_info">
+                        <span class="footer_body_info_rights">All rights reserved</span>
+                        <span>Дизайн сделал<br><a href="#">Bocharov</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.mobile-menu -->
+
+    <!-- .content -->
+    <main class="content">
+        <div class="container">
+
+            <!-- .home -->
+            <div class="home">
+                <div class="home_content">
+                    <h1 class="home_content_title">Персональные гороскопы на 2019 год</h1>
+                    <div class="home_content_description">Гороскоп для всех знаков</div>
+                    <div class="horoscopeall">
+                        <input type="radio" name="horoscopeall" id="h1" checked>
+                        <div class="horoscopeall_body" id="h1b">
+                            <p>СЕГОДНЯ Этот удачный и плодотворный день подходит для самых разных дел. Можно сосредоточиться на том, что прежде не получалось: сейчас есть шанс достичь успехов. Старайтесь извлекать пользу из любых совпадений и случайностей; самые ловкие смогут любые обстоятельства использовать в своих интересах.</p>
+                            <p>Ссоры и конфликты маловероятны. Людям легко договориться друг с другом, догадаться о чужих желаниях. Стоит обсудить какие-то важные вопросы с единомышленниками, партнерами или близкими; в таких беседах рождаются лучшие решения.</p>
+                        </div>
+                        <input type="radio" name="horoscopeall" id="h2">
+                        <div class="horoscopeall_body" id="h2b">
+                            <p>ЗАВТРА Этот удачный и плодотворный день подходит для самых разных дел. Можно сосредоточиться на том, что прежде не получалось: сейчас есть шанс достичь успехов. Старайтесь извлекать пользу из любых совпадений и случайностей; самые ловкие смогут любые обстоятельства использовать в своих интересах.</p>
+                            <p>Ссоры и конфликты маловероятны. Людям легко договориться друг с другом, догадаться о чужих желаниях. Стоит обсудить какие-то важные вопросы с единомышленниками, партнерами или близкими; в таких беседах рождаются лучшие решения.</p>
+                        </div>
+                        <input type="radio" name="horoscopeall" id="h3" >
+                        <div class="horoscopeall_body" id="h3b">
+                            <p>НЕДЕЛЯ Этот удачный и плодотворный день подходит для самых разных дел. Можно сосредоточиться на том, что прежде не получалось: сейчас есть шанс достичь успехов. Старайтесь извлекать пользу из любых совпадений и случайностей; самые ловкие смогут любые обстоятельства использовать в своих интересах.</p>
+                            <p>Ссоры и конфликты маловероятны. Людям легко договориться друг с другом, догадаться о чужих желаниях. Стоит обсудить какие-то важные вопросы с единомышленниками, партнерами или близкими; в таких беседах рождаются лучшие решения.</p>
+                        </div>
+                        <div class="horoscopeall_select">
+                            <label for="h1">Сегодня</label>
+                            <label for="h2">Завтра</label>
+                            <label for="h3">Неделя</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="home_zodiac">
+                    <ul class="home_zodiac_list">
+                        <li class="home_zodiac_list_item">
+                            <a href="zodiac.html">
+                                <div class="home_zodiac_list_item_img z1"></div>
+                                <div class="home_zodiac_list_item_name">Овен</div>
+                            </a>
+                            <div class="home_zodiac_list_item_date">21.03 — 20.04</div>
+                        </li>
+                        <li class="home_zodiac_list_item">
+                            <a href="zodiac.html">
+                                <div class="home_zodiac_list_item_img z2"></div>
+                                <div class="home_zodiac_list_item_name">Телец</div>
+                            </a>
+                            <div class="home_zodiac_list_item_date">21.03 — 20.04</div>
+                        </li>
+                        <li class="home_zodiac_list_item">
+                            <a href="zodiac.html">
+                                <div class="home_zodiac_list_item_img z3"></div>
+                                <div class="home_zodiac_list_item_name">Близнецы</div>
+                            </a>
+                            <div class="home_zodiac_list_item_date">21.03 — 20.04</div>
+                        </li>
+                        <li class="home_zodiac_list_item">
+                            <a href="zodiac.html">
+                                <div class="home_zodiac_list_item_img z4"></div>
+                                <div class="home_zodiac_list_item_name">Рак</div>
+                            </a>
+                            <div class="home_zodiac_list_item_date">21.03 — 20.04</div>
+                        </li>
+                        <li class="home_zodiac_list_item">
+                            <a href="zodiac.html">
+                                <div class="home_zodiac_list_item_img z5"></div>
+                                <div class="home_zodiac_list_item_name">Лев</div>
+                            </a>
+                            <div class="home_zodiac_list_item_date">21.03 — 20.04</div>
+                        </li>
+                        <li class="home_zodiac_list_item">
+                            <a href="zodiac.html">
+                                <div class="home_zodiac_list_item_img z6"></div>
+                                <div class="home_zodiac_list_item_name">Дева</div>
+                            </a>
+                            <div class="home_zodiac_list_item_date">21.03 — 20.04</div>
+                        </li>
+                        <li class="home_zodiac_list_item">
+                            <a href="zodiac.html">
+                                <div class="home_zodiac_list_item_img z7"></div>
+                                <div class="home_zodiac_list_item_name">Весы</div>
+                            </a>
+                            <div class="home_zodiac_list_item_date">21.03 — 20.04</div>
+                        </li>
+                        <li class="home_zodiac_list_item">
+                            <a href="zodiac.html">
+                                <div class="home_zodiac_list_item_img z8"></div>
+                                <div class="home_zodiac_list_item_name">Скорпион</div>
+                            </a>
+                            <div class="home_zodiac_list_item_date">21.03 — 20.04</div>
+                        </li>
+                        <li class="home_zodiac_list_item">
+                            <a href="zodiac.html">
+                                <div class="home_zodiac_list_item_img z9"></div>
+                                <div class="home_zodiac_list_item_name">Стрелец</div>
+                            </a>
+                            <div class="home_zodiac_list_item_date">21.03 — 20.04</div>
+                        </li>
+                        <li class="home_zodiac_list_item">
+                            <a href="zodiac.html">
+                                <div class="home_zodiac_list_item_img z10"></div>
+                                <div class="home_zodiac_list_item_name">Козерог</div>
+                            </a>
+                            <div class="home_zodiac_list_item_date">21.03 — 20.04</div>
+                        </li>
+                        <li class="home_zodiac_list_item">
+                            <a href="zodiac.html">
+                                <div class="home_zodiac_list_item_img z11"></div>
+                                <div class="home_zodiac_list_item_name">Водолей</div>
+                            </a>
+                            <div class="home_zodiac_list_item_date">21.03 — 20.04</div>
+                        </li>
+                        <li class="home_zodiac_list_item">
+                            <a href="zodiac.html">
+                                <div class="home_zodiac_list_item_img z12"></div>
+                                <div class="home_zodiac_list_item_name">Рыбы</div>
+                            </a>
+                            <div class="home_zodiac_list_item_date">21.03 — 20.04</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- decorative element -->
+                <div class="decore1"><img src="img/decore1.svg"></div>
+                <div class="decore2"><img src="img/decore2.svg"></div>
+            </div>
+            <!-- /.home -->
+
+        </div>
+
+        <!-- .content_background -->
+        <div class="content_background">
+                <!-- .container -->
+                <div class="container">
+
+                    <!-- .subscription -->
+                    <article class="subscription subscription_home">
+                        <form action="form.php" method="post">
+                            <div class="select" tabindex="1">
+                                <span class="select_text">Выберите знак зодиака</span>
+                                <input class="select_value" type="hidden" name="zodiac">
+                                <ul class="select_dropdown">
+                                    <li class="select_option">Овен</li>
+                                    <li class="select_option">Телец</li>
+                                    <li class="select_option">Близнецы</li>
+                                    <li class="select_option">Рак</li>
+                                    <li class="select_option">Лев</li>
+                                    <li class="select_option">Дева</li>
+                                    <li class="select_option">Весы</li>
+                                    <li class="select_option">Скорпион</li>
+                                    <li class="select_option">Стрелец</li>
+                                    <li class="select_option">Козерог</li>
+                                    <li class="select_option">Водолей</li>
+                                    <li class="select_option">Рыбы</li>
+                                </ul>
+                            </div>
+                            <input type="email" name="email" placeholder="E-mail" tabindex="2" required>
+                            <input type="submit" value="Подписаться на рассылку" tabindex="3">
+                        </form>
+                    </article>
+                    <!-- /.subscription -->
+
+                    <!-- .news -->
+                    <article class="news">
+                        <h1 class="news_title">Новости и статьи</h1>
+                        <div class="news_wrap">
+        
+                            <!-- .news_wrap_block -->
+                            <div class="news_wrap_block">
+                                <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img1.png')"></div>
+                                <a href="article.html" class="news_wrap_block_title">Бумажный шпагат, где и как его использовать</a>
+                                <div class="news_wrap_block_preview-text">Шпагат, он же бечёвка — это достаточно тонкая упаковочная нить. Чтобы сделать бумажный шпагат, нужно скрутить ...</div>
+                            </div>
+                            <!-- /.news_wrap_block -->
+        
+                            <!-- repeat blocks .news_wrap_block -->
+                            <div class="news_wrap_block">
+                                <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img2.png')"></div>
+                                <a href="article.html" class="news_wrap_block_title">Зороастрийский гороскоп древнее и точнее китайского</a>
+                                <div class="news_wrap_block_preview-text">Китайский гороскоп из 12 животных считается менее точным, чем зороастрийский, поскольку в нем представлено 32 тотема ...</div>
+                            </div>
+                            <div class="news_wrap_block">
+                                <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img3.png')"></div>
+                                <a href="article.html" class="news_wrap_block_title">Профессиональная косметика: чем отличается от обычной?</a>
+                                <div class="news_wrap_block_preview-text">Любая женщина хочет всегда выглядеть безупречно и на это она тратит не только много своего времени, но и финансов.</div>
+                            </div>
+                            <div class="news_wrap_block">
+                                <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img4.png')"></div>
+                                <a href="article.html" class="news_wrap_block_title">Ментальная арифметика в Школе Соробан</a>
+                                <div class="news_wrap_block_preview-text">Предоставить детям возможность раскрыть и применить в жизни необыкновенный природный дар</div>
+                            </div>
+                            <div class="news_wrap_block">
+                                <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img3.png')"></div>
+                                <a href="article.html" class="news_wrap_block_title">Профессиональная косметика: чем отличается от обычной?</a>
+                                <div class="news_wrap_block_preview-text">Любая женщина хочет всегда выглядеть безупречно и на это она тратит не только много своего времени, но и финансов.</div>
+                            </div>
+                            <div class="news_wrap_block">
+                                <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img2.png')"></div>
+                                <a href="article.html" class="news_wrap_block_title">Зороастрийский гороскоп древнее и точнее китайского</a>
+                                <div class="news_wrap_block_preview-text">Китайский гороскоп из 12 животных считается менее точным, чем зороастрийский, поскольку в нем представлено 32 тотема ...</div>
+                            </div>
+                            <div class="news_wrap_block">
+                                <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img1.png')"></div>
+                                <a href="article.html" class="news_wrap_block_title">Бумажный шпагат, где и как его использовать</a>
+                                <div class="news_wrap_block_preview-text">Шпагат, он же бечёвка — это достаточно тонкая упаковочная нить. Чтобы сделать бумажный шпагат, нужно скрутить ...</div>
+                            </div>
+                            <div class="news_wrap_block">
+                                <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img4.png')"></div>
+                                <a href="article.html" class="news_wrap_block_title">Ментальная арифметика в Школе Соробан</a>
+                                <div class="news_wrap_block_preview-text">Предоставить детям возможность раскрыть и применить в жизни необыкновенный природный дар</div>
+                            </div>
+                            <div class="news_wrap_block">
+                                <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img1.png')"></div>
+                                <a href="article.html" class="news_wrap_block_title">Бумажный шпагат, где и как его использовать</a>
+                                <div class="news_wrap_block_preview-text">Шпагат, он же бечёвка — это достаточно тонкая упаковочная нить. Чтобы сделать бумажный шпагат, нужно скрутить ...</div>
+                            </div>
+                            <div class="news_wrap_block">
+                                <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img4.png')"></div>
+                                <a href="article.html" class="news_wrap_block_title">Ментальная арифметика в Школе Соробан</a>
+                                <div class="news_wrap_block_preview-text">Предоставить детям возможность раскрыть и применить в жизни необыкновенный природный дар</div>
+                            </div>
+                            <div class="news_wrap_block">
+                                <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img3.png')"></div>
+                                <a href="article.html" class="news_wrap_block_title">Профессиональная косметика: чем отличается от обычной?</a>
+                                <div class="news_wrap_block_preview-text">Любая женщина хочет всегда выглядеть безупречно и на это она тратит не только много своего времени, но и финансов.</div>
+                            </div>
+                            <div class="news_wrap_block">
+                                <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img2.png')"></div>
+                                <a href="article.html" class="news_wrap_block_title">Зороастрийский гороскоп древнее и точнее китайского</a>
+                                <div class="news_wrap_block_preview-text">Китайский гороскоп из 12 животных считается менее точным, чем зороастрийский, поскольку в нем представлено 32 тотема ...</div>
+                            </div>
+                            <!-- repeat blocks /.news_wrap_block -->
+                        </div>
+                    </article>
+                    <!-- /.news -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!-- /.content_background -->
+    </main>
+    <!-- /.content -->
+
+    <!-- .footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_head">
+                <img class="footer_head_logo" src="img/logo-footer.svg" alt="Horo">
+                <nav class="footer_head_menu">
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Статьи</a></li>
+                        <li><a href="#">En</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer_body">
+                <div class="footer_body_copyright">© 2019, HORO.ua - гороскоп на сегодня, завтра, неделю. <br> Все права защищены. Любая перепечатка разрешается только с использованием активной индексируемой ссылки на сам материал или на главную страницу.</div>
+                <div class="footer_body_info">
+                    <span class="footer_body_info_rights">All rights reserved</span>
+                    <span>Дизайн сделал<br><a href="#">Bocharov</a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /.footer -->
+
+    <!-- connecting scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/select.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

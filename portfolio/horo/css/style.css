@@ -1,0 +1,2533 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+body, main, article,
+aside, ul, ol, h1, h2,
+h3, p, table, blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Light.eot");
+  src: local("Montserrat Light"), local("Montserrat-Light"), url("../fonts/Montserrat/Montserrat-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Light.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Thin.eot");
+  src: local("Montserrat Thin"), local("Montserrat-Thin"), url("../fonts/Montserrat/Montserrat-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Thin.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-SemiBold.eot");
+  src: local("Montserrat SemiBold"), local("Montserrat-SemiBold"), url("../fonts/Montserrat/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-SemiBold.woff") format("woff"), url("../fonts/Montserrat/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-ExtraLight.eot");
+  src: local("Montserrat ExtraLight"), local("Montserrat-ExtraLight"), url("../fonts/Montserrat/Montserrat-ExtraLight.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-ExtraLight.woff") format("woff"), url("../fonts/Montserrat/Montserrat-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Bold.eot");
+  src: local("Montserrat Bold"), local("Montserrat-Bold"), url("../fonts/Montserrat/Montserrat-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Bold.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Regular.eot");
+  src: local("Montserrat Regular"), local("Montserrat-Regular"), url("../fonts/Montserrat/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Regular.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Medium.eot");
+  src: local("Montserrat Medium"), local("Montserrat-Medium"), url("../fonts/Montserrat/Montserrat-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Medium.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-ExtraBold.eot");
+  src: local("Montserrat ExtraBold"), local("Montserrat-ExtraBold"), url("../fonts/Montserrat/Montserrat-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-ExtraBold.woff") format("woff"), url("../fonts/Montserrat/Montserrat-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url("../fonts/Montserrat/Montserrat-Black.eot");
+  src: local("Montserrat Black"), local("Montserrat-Black"), url("../fonts/Montserrat/Montserrat-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/Montserrat/Montserrat-Black.woff") format("woff"), url("../fonts/Montserrat/Montserrat-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans Cyrl 500';
+  src: url("../fonts/MuseoSans/MuseoSansCyrl-500.eot");
+  src: local("MuseoSansCyrl-500"), url("../fonts/MuseoSans/../fonts/MuseoSans/MuseoSansCyrl-500.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSans/MuseoSansCyrl-500.woff") format("woff"), url("../fonts/MuseoSans/MuseoSansCyrl-500.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans Cyrl 900';
+  src: url("../fonts/MuseoSans/MuseoSansCyrl-900.eot");
+  src: local("MuseoSansCyrl-900"), url("../fonts/MuseoSans/MuseoSansCyrl-900.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSans/MuseoSansCyrl-900.woff") format("woff"), url("../fonts/MuseoSans/MuseoSansCyrl-900.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans Cyrl 700';
+  src: url("../fonts/MuseoSans/MuseoSansCyrl-700.eot");
+  src: local("MuseoSansCyrl-700"), url("../fonts/MuseoSans/MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSans/MuseoSansCyrl-700.woff") format("woff"), url("../fonts/MuseoSans/MuseoSansCyrl-700.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans Cyrl 300';
+  src: url("../fonts/MuseoSans/MuseoSansCyrl-300.eot");
+  src: local("MuseoSansCyrl-300"), url("../fonts/MuseoSans/MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSans/MuseoSansCyrl-300.woff") format("woff"), url("../fonts/MuseoSans/MuseoSansCyrl-300.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Museo Sans Cyrl 100';
+  src: url("../fonts/MuseoSans/MuseoSansCyrl-100.eot");
+  src: local("MuseoSansCyrl-100"), url("../fonts/MuseoSans/MuseoSansCyrl-100.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSans/MuseoSansCyrl-100.woff") format("woff"), url("../fonts/MuseoSans/MuseoSansCyrl-100.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slick-track:before, .slick-track:after {
+  content: "";
+  display: table;
+}
+
+.slick-track:after {
+  clear: both;
+}
+
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-slide.slick-loading img {
+  display: none;
+}
+
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+  display: block;
+}
+
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+/* Slider */
+.slick-list {
+  width: 650px;
+  height: 390px;
+  margin: auto;
+}
+
+.slick-loading .slick-list {
+  background: #fff url("./../img/ajax-loader.gif") center center no-repeat;
+}
+
+/* Icons */
+@font-face {
+  font-family: "slick";
+  src: url("./fonts/../../fonts/Slick/slick.eot");
+  src: url("./fonts/../../fonts/Slick/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/../../fonts/Slick/slick.woff") format("woff"), url("./fonts/../../fonts/Slick/slick.ttf") format("truetype"), url("./fonts/../../fonts/Slick/slick.svg#slick") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  z-index: 1;
+  background: #FFFFFF;
+  border: 1px solid #644EEE;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 2px;
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  color: transparent;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  padding: 0;
+  outline: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.slick-prev:hover, .slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  outline: none;
+  color: white;
+}
+
+.slick-prev:hover:before, .slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: #644EEE;
+}
+
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  background: url("../img/arrowh.svg");
+}
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  margin: auto;
+  width: 8px;
+  height: 12px;
+  display: block;
+  background: url("../img/arrow.svg");
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.slick-prev {
+  left: 0;
+}
+
+[dir="rtl"] .slick-prev {
+  left: auto;
+  right: -25px;
+}
+
+.slick-prev:before {
+  content: '';
+}
+
+[dir="rtl"] .slick-prev:before {
+  content: '';
+}
+
+.slick-next {
+  right: 0;
+}
+
+[dir="rtl"] .slick-next {
+  left: -25px;
+  right: auto;
+}
+
+.slick-next:before {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  content: '';
+}
+
+[dir="rtl"] .slick-next:before {
+  content: '';
+}
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -25px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  border: 0;
+  background: transparent;
+  display: block;
+  height: 20px;
+  width: 20px;
+  outline: none;
+  line-height: 0px;
+  font-size: 0px;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.slick-dots li button:hover, .slick-dots li button:focus {
+  outline: none;
+}
+
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+  opacity: 1;
+}
+
+.slick-dots li button:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "•";
+  width: 20px;
+  height: 20px;
+  font-family: "slick";
+  font-size: 6px;
+  line-height: 20px;
+  text-align: center;
+  color: black;
+  opacity: 0.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-dots li.slick-active button:before {
+  color: black;
+  opacity: 0.75;
+}
+
+body {
+  font-family: 'Museo Sans Cyrl 300';
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1186px;
+  padding: 0 26px;
+  height: auto;
+  margin: auto;
+}
+
+.content {
+  padding-top: 196px;
+  padding-bottom: 100px;
+}
+
+.content_background {
+  background-color: #FDFDFD;
+  padding-bottom: 56px;
+  margin-bottom: -100px;
+}
+
+.content_background .container {
+  -webkit-transform: translateY(-48px);
+          transform: translateY(-48px);
+}
+
+.header {
+  width: 100%;
+  background-color: #fff;
+  height: 100px;
+  border-bottom: 1px solid #F1F1F1;
+  position: fixed;
+  z-index: 99;
+}
+
+.header .container {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header_logo {
+  margin-right: 30px;
+}
+
+.header_logo img {
+  width: 164px;
+}
+
+.header_date {
+  width: auto;
+  height: 28px;
+  background-color: #29262A;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 14px;
+  padding-left: 44px;
+  padding-right: 20px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+
+.header_date:before {
+  content: '';
+  width: 14px;
+  height: 12px;
+  background: url("../img/calendar.svg");
+  background-size: 100%;
+  position: absolute;
+  left: 20px;
+  top: 8px;
+}
+
+.header_menu {
+  margin-left: auto;
+}
+
+.header_menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header_menu ul li {
+  margin-right: 40px;
+}
+
+.header_menu ul li:last-child {
+  margin-right: 0;
+}
+
+.header_menu ul li a {
+  color: #29262A;
+  font-size: 18px;
+  position: relative;
+}
+
+.header_menu ul li a:before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0.2px;
+  content: '';
+  background-color: #644EEE;
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.header_menu ul li a:hover:before, .header_menu ul li a.active:before {
+  opacity: 1;
+}
+
+.header .button-mobile-menu {
+  width: 35px;
+  height: 30px;
+  background: url("../img/burger-menu.svg");
+  background-size: 100%;
+  margin-left: auto;
+  display: none;
+  cursor: pointer;
+}
+
+.header .button-mobile-menu.open {
+  width: 30px;
+  height: 30px;
+  background: url("../img/close.svg");
+  background-size: 100%;
+}
+
+.horoscope {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  color: #29262A;
+  position: relative;
+  margin-bottom: 100px;
+}
+
+.horoscope_header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 62px;
+}
+
+.horoscope_header_zodiac {
+  width: 100px;
+  height: 100px;
+  background-color: #F9F9F9;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  margin-right: 24px;
+}
+
+.horoscope_header_meta {
+  color: #29262A;
+}
+
+.horoscope_header_meta_name {
+  font-family: 'Museo Sans Cyrl 500';
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+
+.horoscope_header_meta_date {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.horoscope input[type="radio"] {
+  display: none;
+}
+
+.horoscope label {
+  border: 1px solid #644EEE;
+  border-radius: 5px;
+  color: #29262A;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.horoscope label:hover {
+  background-color: #F9F8FE;
+}
+
+.horoscope_day {
+  width: calc(50% - 15px);
+  display: none;
+}
+
+.horoscope_day_select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.horoscope_day_select_label {
+  width: 180px;
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 18px;
+}
+
+.horoscope_day_select_label:nth-child(1) {
+  border-radius: 3px 0 0 3px;
+}
+
+.horoscope_day_select_label:nth-child(2) {
+  border-radius: 0 3px 3px 0;
+}
+
+.horoscope_day_content {
+  display: none;
+}
+
+.horoscope_day_content h3 {
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 24px;
+}
+
+.horoscope_day_content p {
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 24px;
+}
+
+.horoscope_day_content p:last-child {
+  margin-bottom: 0;
+}
+
+.horoscope_type {
+  width: calc(50% - 15px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.horoscope_type_label {
+  width: calc(50% - 15px);
+  height: 70px;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 15px;
+  font-size: 18px;
+  font-family: 'Museo Sans Cyrl 500';
+}
+
+.horoscope_type_label_zodiac {
+  width: 40px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 26px;
+}
+
+.horoscope_type_label_zodiac .svg_zodiac {
+  fill: #644EEE;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.horoscope_type_label span {
+  max-width: 112px;
+}
+
+.horoscope .decore1,
+.horoscope .decore2 {
+  position: absolute;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.horoscope .decore1 {
+  left: -154px;
+  bottom: -56px;
+}
+
+.horoscope .decore2 {
+  right: -156px;
+  top: 0;
+}
+
+.horoscope #t1:checked + #d1,
+.horoscope #t1d1:checked ~ #bt1d1,
+.horoscope #t1d2:checked ~ #bt1d2,
+.horoscope #t2:checked + #d2,
+.horoscope #t2d1:checked ~ #bt2d1,
+.horoscope #t2d2:checked ~ #bt2d2,
+.horoscope #t3:checked + #d3,
+.horoscope #t3d1:checked ~ #bt3d1,
+.horoscope #t3d2:checked ~ #bt3d2,
+.horoscope #t4:checked + #d4,
+.horoscope #t4d1:checked ~ #bt4d1,
+.horoscope #t4d2:checked ~ #bt4d2,
+.horoscope #t5:checked + #d5,
+.horoscope #t5d1:checked ~ #bt5d1,
+.horoscope #t5d2:checked ~ #bt5d2,
+.horoscope #t6:checked + #d6,
+.horoscope #t6d1:checked ~ #bt6d1,
+.horoscope #t6d2:checked ~ #bt6d2,
+.horoscope #t7:checked + #d7,
+.horoscope #t7d1:checked ~ #bt7d1,
+.horoscope #t7d2:checked ~ #bt7d2,
+.horoscope #t8:checked + #d8,
+.horoscope #t8d1:checked ~ #bt8d1,
+.horoscope #t8d2:checked ~ #bt8d2 {
+  display: block;
+}
+
+.horoscope #t1:checked ~ .horoscope_type #label1,
+.horoscope #t2:checked ~ .horoscope_type #label2,
+.horoscope #t3:checked ~ .horoscope_type #label3,
+.horoscope #t4:checked ~ .horoscope_type #label4,
+.horoscope #t5:checked ~ .horoscope_type #label5,
+.horoscope #t6:checked ~ .horoscope_type #label6,
+.horoscope #t7:checked ~ .horoscope_type #label7,
+.horoscope #t8:checked ~ .horoscope_type #label8 {
+  background-color: #644EEE;
+  color: #fff;
+}
+
+.horoscope #t1:checked ~ .horoscope_type #label1 .svg_zodiac,
+.horoscope #t2:checked ~ .horoscope_type #label2 .svg_zodiac,
+.horoscope #t3:checked ~ .horoscope_type #label3 .svg_zodiac,
+.horoscope #t4:checked ~ .horoscope_type #label4 .svg_zodiac,
+.horoscope #t5:checked ~ .horoscope_type #label5 .svg_zodiac,
+.horoscope #t6:checked ~ .horoscope_type #label6 .svg_zodiac,
+.horoscope #t7:checked ~ .horoscope_type #label7 .svg_zodiac,
+.horoscope #t8:checked ~ .horoscope_type #label8 .svg_zodiac {
+  fill: white;
+}
+
+.horoscope #t1d1:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(1),
+.horoscope #t1d2:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(2),
+.horoscope #t2d1:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(1),
+.horoscope #t2d2:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(2),
+.horoscope #t3d1:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(1),
+.horoscope #t3d2:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(2),
+.horoscope #t4d1:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(1),
+.horoscope #t4d2:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(2),
+.horoscope #t5d1:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(1),
+.horoscope #t5d2:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(2),
+.horoscope #t6d1:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(1),
+.horoscope #t6d2:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(2),
+.horoscope #t7d1:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(1),
+.horoscope #t7d2:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(2),
+.horoscope #t8d1:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(1),
+.horoscope #t8d2:checked ~ .horoscope_day_select .horoscope_day_select_label:nth-child(2) {
+  background-color: #644EEE;
+  color: #fff;
+}
+
+.zodiac_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 110px;
+}
+
+.zodiac_list_item {
+  color: #29262A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.zodiac_list_item a {
+  color: #29262A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.zodiac_list_item a:hover .zodiac_list_item_img {
+  background-color: #fff;
+  border: 3px solid #094BB0;
+}
+
+.zodiac_list_item_img {
+  width: 64px;
+  height: 64px;
+  background-color: #F9F9F9;
+  border: 3px solid #F9F9F9;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: center;
+  margin-bottom: 15px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.zodiac_list_item_name {
+  font-family: 'Museo Sans Cyrl 500';
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 7px;
+}
+
+.zodiac_list_item_date {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 165px;
+  position: relative;
+}
+
+.home_content {
+  width: 456px;
+  color: #29262A;
+}
+
+.home_content_title {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 44px;
+  margin-bottom: 72px;
+}
+
+.home_content_description {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 32px;
+}
+
+.home_content .horoscopeall {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home_content .horoscopeall input[type="radio"] {
+  display: none;
+}
+
+.home_content .horoscopeall_select {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 56px;
+}
+
+.home_content .horoscopeall_select label {
+  width: calc(100% / 3);
+  height: 44px;
+  background-color: #fff;
+  border: 0.5px solid #644EEE;
+  cursor: pointer;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home_content .horoscopeall_select label:hover {
+  background-color: #F9F8FE;
+}
+
+.home_content .horoscopeall_select label:nth-child(1) {
+  border-radius: 3px 0 0 3px;
+  border-right: 0;
+}
+
+.home_content .horoscopeall_select label:nth-child(3) {
+  border-left: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.home_content .horoscopeall_body {
+  display: none;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.home_content .horoscopeall_body p {
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 24px;
+}
+
+.home_content .horoscopeall_body p:last-child {
+  margin-bottom: 0;
+}
+
+.home_content #h1:checked + #h1b,
+.home_content #h2:checked + #h2b,
+.home_content #h3:checked + #h3b {
+  display: block;
+}
+
+.home_content #h1:checked ~ .horoscopeall_select label:nth-child(1),
+.home_content #h2:checked ~ .horoscopeall_select label:nth-child(2),
+.home_content #h3:checked ~ .horoscopeall_select label:nth-child(3) {
+  background-color: #644EEE;
+  color: white;
+}
+
+.home_zodiac {
+  width: 582px;
+}
+
+.home_zodiac_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.home_zodiac_list_item {
+  width: calc(100% / 3 - 66.6666px);
+  margin: 0 33.3333px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 32px;
+}
+
+.home_zodiac_list_item a {
+  color: #29262A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.home_zodiac_list_item a:hover .home_zodiac_list_item_img {
+  background-color: #fff;
+  border: 3px solid #094BB0;
+}
+
+.home_zodiac_list_item_img {
+  width: 100px;
+  height: 100px;
+  background-color: #F9F9F9;
+  border: 3px solid #F9F9F9;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  margin-bottom: 24px;
+}
+
+.home_zodiac_list_item_name {
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 10px;
+  font-family: 'Museo Sans Cyrl 500';
+}
+
+.home_zodiac_list_item_date {
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.home .decore1,
+.home .decore2 {
+  position: absolute;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.home .decore1 {
+  left: -154px;
+  bottom: -160px;
+}
+
+.home .decore2 {
+  right: -120px;
+  top: -160px;
+}
+
+.horoscope .z1,
+.zodiac .z1,
+.home .z1 {
+  background-image: url("../img/horoscope/z1.svg");
+}
+
+.horoscope .z2,
+.zodiac .z2,
+.home .z2 {
+  background-image: url("../img/horoscope/z2.svg");
+}
+
+.horoscope .z3,
+.zodiac .z3,
+.home .z3 {
+  background-image: url("../img/horoscope/z3.svg");
+}
+
+.horoscope .z4,
+.zodiac .z4,
+.home .z4 {
+  background-image: url("../img/horoscope/z4.svg");
+}
+
+.horoscope .z5,
+.zodiac .z5,
+.home .z5 {
+  background-image: url("../img/horoscope/z5.svg");
+}
+
+.horoscope .z6,
+.zodiac .z6,
+.home .z6 {
+  background-image: url("../img/horoscope/z6.svg");
+}
+
+.horoscope .z7,
+.zodiac .z7,
+.home .z7 {
+  background-image: url("../img/horoscope/z7.svg");
+}
+
+.horoscope .z8,
+.zodiac .z8,
+.home .z8 {
+  background-image: url("../img/horoscope/z8.svg");
+}
+
+.horoscope .z9,
+.zodiac .z9,
+.home .z9 {
+  background-image: url("../img/horoscope/z9.svg");
+}
+
+.horoscope .z10,
+.zodiac .z10,
+.home .z10 {
+  background-image: url("../img/horoscope/z10.svg");
+}
+
+.horoscope .z11,
+.zodiac .z11,
+.home .z11 {
+  background-image: url("../img/horoscope/z11.svg");
+}
+
+.horoscope .z12,
+.zodiac .z12,
+.home .z12 {
+  background-image: url("../img/horoscope/z12.svg");
+}
+
+.news {
+  color: #29262A;
+}
+
+.news_title {
+  font-weight: 300;
+  font-family: 'Montserrat';
+  font-size: 36px;
+  position: relative;
+  padding-left: 52px;
+  margin-bottom: 57px;
+}
+
+.news_title:before {
+  width: 32px;
+  height: 31px;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  background: url("../img/news.svg");
+}
+
+.news_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.news_wrap_block {
+  width: calc(100% / 4 - 3px);
+  height: auto;
+  margin-bottom: 24px;
+  padding: 13px;
+  border-radius: 3px;
+  z-index: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.news_wrap_block:hover {
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 20px #F1F1F1;
+          box-shadow: 0px 0px 20px #F1F1F1;
+  z-index: 2;
+}
+
+.news_wrap_block_preview {
+  width: 100%;
+  height: 158px;
+  background-size: cover;
+  border-radius: 3px;
+  margin-bottom: 24px;
+}
+
+.news_wrap_block_title {
+  color: #29262A;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 22px;
+  margin-bottom: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 66px;
+  max-height: 66px;
+  display: block;
+}
+
+.news_wrap_block_preview-text {
+  font-size: 15px;
+  line-height: 18px;
+  margin-bottom: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-height: 72px;
+  max-height: 66px;
+}
+
+.pagination {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pagination ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pagination ul li {
+  margin-right: 8px;
+}
+
+.pagination ul li:last-child {
+  margin-right: 0;
+}
+
+.pagination_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 32px;
+  height: 32px;
+  background-color: #fff;
+  border: 1px solid #F9F9F9;
+  border-radius: 2px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: 14px;
+  font-family: 'Museo Sans Cyrl 500';
+  color: #595959;
+}
+
+.pagination_block:hover, .pagination_block.active {
+  background-color: #644EEE;
+  border: 1px solid #644EEE;
+  color: #fff;
+}
+
+.pagination_block:hover .pagination_arrow, .pagination_block.active .pagination_arrow {
+  fill: #ffffff;
+  opacity: 1;
+}
+
+.pagination_block__arrow {
+  border: 1px solid #644EEE;
+}
+
+.pagination_arrow {
+  opacity: 0.65;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.pagination_arrow__right {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.article {
+  width: 100%;
+  height: auto;
+  color: #29262A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.article h1 {
+  font-family: 'Montserrat';
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 44px;
+  margin-top: 72px;
+  margin-bottom: 92px;
+}
+
+.article h2 {
+  font-family: 'Montserrat';
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 37px;
+  margin-top: 56px;
+  margin-bottom: 32px;
+}
+
+.article h3 {
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  margin-top: 56px;
+  margin-bottom: 32px;
+}
+
+.article h3 blockquote {
+  font-family: 'Museo Sans Cyrl 500';
+  font-size: 24px;
+  line-height: 29px;
+  margin-top: 0;
+  margin-bottom: 72px;
+  padding: 28px 24px;
+  background: #644EEE;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.article h3.footnote {
+  font-family: 'Museo Sans Cyrl 500';
+  font-size: 30px;
+  line-height: 36px;
+  color: #644EEE;
+  padding: 34px 26px;
+  margin-top: 0;
+  margin-bottom: 32px;
+  border-radius: 5px;
+  border: 5px solid #644EEE;
+}
+
+.article blockquote {
+  font-family: 'Museo Sans Cyrl 500';
+  font-size: 24px;
+  line-height: 29px;
+  margin-top: 0;
+  margin-bottom: 72px;
+  padding: 28px 24px;
+  background: #644EEE;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.article p {
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 24px;
+}
+
+.article p a {
+  font-family: 'Museo Sans Cyrl 500';
+  color: #094BB0;
+  text-decoration: underline;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.article p a:hover {
+  opacity: 0.7;
+}
+
+.article ul {
+  margin-bottom: 32px;
+  padding-left: 100px;
+}
+
+.article ul li {
+  font-size: 15px;
+  line-height: 18px;
+  padding-left: 50px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.article ul li:before {
+  content: '—';
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  position: absolute;
+  top: -11px;
+  left: 0;
+}
+
+.article ul li:last-child {
+  margin-bottom: 0;
+}
+
+.article ul li a {
+  font-family: 'Museo Sans Cyrl 500';
+  color: #094BB0;
+  text-decoration: underline;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.article ul li a:hover {
+  opacity: 0.7;
+}
+
+.article ol {
+  margin-bottom: 32px;
+  counter-reset: num;
+  padding: 32px 48px;
+  background: #F9F9F9;
+  border-radius: 5px;
+}
+
+.article ol li {
+  font-size: 15px;
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 30px;
+}
+
+.article ol li:before {
+  content: counter(num);
+  counter-increment: num;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 37px;
+  position: absolute;
+  top: -11px;
+  left: 0;
+}
+
+.article ol li:last-child {
+  margin-bottom: 0;
+}
+
+.article ol li a {
+  font-family: 'Museo Sans Cyrl 500';
+  color: #094BB0;
+  text-decoration: underline;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.article ol li a:hover {
+  opacity: 0.7;
+}
+
+.article img {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 32px;
+  border-radius: 3px;
+}
+
+.article .line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.article .line .footnote {
+  width: 358px;
+  margin-left: 30px;
+}
+
+.article .slider {
+  margin-top: 32px;
+  margin-bottom: 72px;
+}
+
+.article .slider_item {
+  width: 100%;
+  height: 390px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 3px;
+}
+
+.article_header {
+  width: 100%;
+  height: 390px;
+  background-size: cover;
+  position: relative;
+  padding: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: 56px;
+}
+
+.article_header h1 {
+  margin: 0;
+  max-width: 820px;
+  color: #fff;
+  z-index: 2;
+}
+
+.article_header_gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(56.56%, rgba(255, 255, 255, 0)), to(#29262A));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 56.56%, #29262A 100%);
+  z-index: 1;
+}
+
+.article_content {
+  width: calc(100% - 290px);
+  height: auto;
+  margin-bottom: 140px;
+}
+
+.article_share {
+  width: 260px;
+  height: auto;
+  margin-left: 30px;
+  margin-top: 16px;
+  margin-bottom: 164px;
+  position: -webkit-sticky;
+  position: sticky;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  top: 172px;
+}
+
+.article_share_title {
+  font-family: 'Museo Sans Cyrl 500';
+  margin-bottom: 25px;
+}
+
+.article_share_wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.article_share_block {
+  width: calc(50% - 9px);
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #644EEE;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.article_share_block:nth-child(1) {
+  margin-bottom: 20px;
+}
+
+.article_share_block:hover {
+  background-color: rgba(100, 78, 238, 0.04);
+}
+
+.article_share_block_img {
+  width: 28px;
+  height: 28px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 8px;
+}
+
+.article_share_block_img__fb {
+  background-image: url("../img/fb.svg");
+}
+
+.article_share_block_img__ok {
+  background-image: url("../img/ok.svg");
+}
+
+.article_share_block_img__tw {
+  background-image: url("../img/tw.svg");
+}
+
+.article_share_block_img__vk {
+  background-image: url("../img/vk.svg");
+}
+
+.article_share_block span {
+  font-family: 'Museo Sans Cyrl 500';
+  color: #094BB0;
+}
+
+.subscription {
+  width: 940px;
+  padding: 26px 0;
+  margin: auto;
+  margin-bottom: 96px;
+  margin-top: 48px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 4px 20px #F1F1F1;
+          box-shadow: 0px 4px 20px #F1F1F1;
+  border-radius: 5px;
+}
+
+.subscription.subscription_home {
+  margin-bottom: 70px;
+}
+
+.subscription form {
+  width: 746px;
+  height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+
+.subscription form .select {
+  width: 228px;
+  border: 1px solid #644EEE;
+  border-right: 0;
+  outline: none;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #29262A;
+}
+
+.subscription form .select:hover, .subscription form .select:focus {
+  background-color: rgba(100, 78, 238, 0.04);
+}
+
+.subscription form .select:after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 8px;
+  background: url("../img/select-arrow.svg") no-repeat;
+  background-size: cover;
+  right: 15px;
+  top: calc(50% - 4px);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.subscription form .select_text {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 14px;
+}
+
+.subscription form .select:focus .select_dropdown {
+  display: block;
+}
+
+.subscription form .select:focus:after {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.subscription form .select_dropdown {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  right: -1px;
+  list-style-type: none;
+  -webkit-box-shadow: -5px 10px 10px rgba(100, 78, 238, 0.2);
+          box-shadow: -5px 10px 10px rgba(100, 78, 238, 0.2);
+  border: 1px solid #644EEE;
+  background-color: #fff;
+  display: none;
+  z-index: 3;
+}
+
+.subscription form .select_option {
+  height: 29px;
+  padding-left: 15px;
+  border-bottom: 0.5px solid #644EEE;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.subscription form .select_option:last-child {
+  border-bottom: 0;
+}
+
+.subscription form .select_option:hover {
+  font-family: 'Museo Sans Cyrl 500';
+  text-decoration: underline;
+}
+
+.subscription form input[type="email"] {
+  font-family: 'Museo Sans Cyrl 300';
+  width: 258px;
+  padding: 0 24px;
+  border: 1px solid #644EEE;
+  border-right: 0;
+  outline: none;
+  color: #29262A;
+  font-size: 16px;
+}
+
+.subscription form input[type="email"]:hover, .subscription form input[type="email"]:focus {
+  background-color: rgba(100, 78, 238, 0.04);
+}
+
+.subscription form input[type="email"]::-webkit-input-placeholder {
+  color: #29262A;
+}
+
+.subscription form input[type="email"]:-ms-input-placeholder {
+  color: #29262A;
+}
+
+.subscription form input[type="email"]::-ms-input-placeholder {
+  color: #29262A;
+}
+
+.subscription form input[type="email"]::placeholder {
+  color: #29262A;
+}
+
+.subscription form input[type="submit"] {
+  font-family: 'Museo Sans Cyrl 300';
+  background-color: #644EEE;
+  border: 0;
+  border-radius: 0 3px 3px 0;
+  font-size: 16px;
+  width: 260px;
+  color: #fff;
+  font-family: 'Museo Sans Cyrl 500';
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.subscription form input[type="submit"]:hover {
+  background-color: rgba(100, 78, 238, 0.7);
+}
+
+.footer,
+.mobile-menu_footer {
+  width: 100%;
+  padding: 28px 0;
+  background-color: #094BB0;
+}
+
+.footer_head,
+.mobile-menu_footer_head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 28px;
+}
+
+.footer_head_logo,
+.mobile-menu_footer_head_logo {
+  width: 164px;
+}
+
+.footer_head_menu ul,
+.mobile-menu_footer_head_menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer_head_menu ul li,
+.mobile-menu_footer_head_menu ul li {
+  margin-right: 40px;
+}
+
+.footer_head_menu ul li:last-child,
+.mobile-menu_footer_head_menu ul li:last-child {
+  margin-right: 0;
+}
+
+.footer_head_menu ul li a,
+.mobile-menu_footer_head_menu ul li a {
+  font-family: 'Museo Sans Cyrl 500';
+  font-size: 18px;
+  color: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer_head_menu ul li a:hover,
+.mobile-menu_footer_head_menu ul li a:hover {
+  opacity: 0.7;
+}
+
+.footer_body,
+.mobile-menu_footer_body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer_body_copyright,
+.mobile-menu_footer_body_copyright {
+  font-size: 15px;
+  max-width: 450px;
+  color: #fff;
+  line-height: 18px;
+}
+
+.footer_body_info,
+.mobile-menu_footer_body_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fff;
+  font-size: 15px;
+}
+
+.footer_body_info span,
+.mobile-menu_footer_body_info span {
+  text-align: right;
+}
+
+.footer_body_info span a,
+.mobile-menu_footer_body_info span a {
+  color: #fff;
+  font-family: 'Museo Sans Cyrl 500';
+  text-decoration: underline;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.footer_body_info span a:hover,
+.mobile-menu_footer_body_info span a:hover {
+  opacity: 0.7;
+}
+
+.footer_body_info_rights,
+.mobile-menu_footer_body_info_rights {
+  margin-bottom: 35px;
+}
+
+.mobile-menu {
+  display: none;
+  background-color: #fff;
+  width: 100%;
+  height: calc(100% - 100px);
+  position: fixed;
+  top: 100px;
+  overflow-y: auto;
+  z-index: 99;
+}
+
+.mobile-menu_nav {
+  padding-top: 30px;
+  padding-bottom: 68px;
+}
+
+.mobile-menu_nav span {
+  font-family: 'Montserrat';
+  font-size: 33px;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 70px;
+  display: block;
+  color: #29262A;
+}
+
+.mobile-menu_nav ul li {
+  margin-bottom: 22px;
+}
+
+.mobile-menu_nav ul li a {
+  font-family: 'Montserrat';
+  font-size: 33px;
+  font-weight: 300;
+  color: #29262A;
+}
+
+.mobile-menu_nav ul li:last-child {
+  margin-bottom: 0;
+  margin-top: 36px;
+}
+
+.mobile-menu_nav ul li:last-child a {
+  font-weight: 600;
+}
+
+.mobile-menu_footer {
+  padding-top: 28px;
+  padding-bottom: 40px;
+}
+
+.mobile-menu_footer .footer_head {
+  margin-bottom: 50px;
+}
+
+.mobile-menu_footer .footer_head_logo {
+  width: 164px;
+}
+
+.mobile-menu_footer .footer_body_info {
+  font-size: 18px;
+}
+
+@media screen and (max-width: 1023px) {
+  .content {
+    padding-top: 168px;
+    padding-bottom: 72px;
+  }
+  .content_background {
+    padding-bottom: 50px;
+    margin-bottom: -72px;
+  }
+  .header_logo img {
+    width: 156px;
+  }
+  .header_date {
+    height: 26px;
+  }
+  .horoscope {
+    margin-bottom: 90px;
+  }
+  .horoscope_header {
+    margin-bottom: 34px;
+  }
+  .horoscope_day {
+    width: 100%;
+    margin-bottom: 34px;
+  }
+  .horoscope_day_select_label {
+    width: 50%;
+    height: 57px;
+    font-size: 20px;
+  }
+  .horoscope_type {
+    width: 100%;
+  }
+  .horoscope .decore1 {
+    top: 12%;
+    left: -28px;
+    bottom: auto;
+  }
+  .horoscope .decore2 {
+    right: -6%;
+    top: -12%;
+  }
+  .zodiac {
+    margin-top: 72px;
+  }
+  .zodiac_list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 70px;
+  }
+  .zodiac_list_item {
+    width: calc(100% / 6);
+    margin-bottom: 30px;
+  }
+  .home {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 120px;
+  }
+  .home_content {
+    width: 100%;
+    margin-bottom: 72px;
+  }
+  .home_content_title {
+    margin-bottom: 56px;
+  }
+  .home_content .horoscopeall_select {
+    margin-bottom: 32px;
+  }
+  .home_content .horoscopeall_select label {
+    font-size: 20px;
+    height: 57px;
+  }
+  .home_zodiac {
+    width: 100%;
+  }
+  .home .decore1 {
+    top: 16%;
+    left: -16%;
+    bottom: auto;
+  }
+  .home .decore2 {
+    right: -6%;
+    top: -6%;
+  }
+  .news_wrap_block {
+    width: calc(100% / 3 - (8px / 3));
+  }
+  .news_wrap_block_title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .news_wrap_block_preview-text {
+    margin-bottom: 14px;
+  }
+  .news.news_popular .news_wrap_block:nth-child(4) {
+    display: none;
+  }
+  .pagination {
+    margin-top: 36px;
+  }
+  .article h1 {
+    font-size: 33px;
+    line-height: 40px;
+    margin-bottom: 24px;
+  }
+  .article ul {
+    padding-left: 64px;
+  }
+  .article ul li {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .article ol {
+    padding: 30px;
+  }
+  .article ol li {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .article .line .footnote {
+    padding: 32px 20px;
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .article .slider {
+    margin-top: 72px;
+  }
+  .article .slider .slick-list {
+    width: 590px;
+    height: 358px;
+  }
+  .article .slider_item {
+    height: 358px;
+  }
+  .article_header {
+    margin-bottom: 24px;
+  }
+  .article_header h1 {
+    margin: 0;
+  }
+  .article_content {
+    width: 100%;
+    margin-bottom: 48px;
+  }
+  .article_share {
+    width: 100%;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 72px;
+  }
+  .article_share_wrap {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .article_share_block {
+    max-width: 218px;
+    margin-right: 30px;
+  }
+  .subscription {
+    width: 716px;
+    padding: 34px 0;
+    margin-top: 51px;
+    margin-bottom: 22px;
+  }
+  .subscription form {
+    width: 652px;
+    height: 34px;
+  }
+  .subscription form .select {
+    width: 200px;
+    font-size: 14px;
+  }
+  .subscription form .select:after {
+    right: 10px;
+  }
+  .subscription form .select_text {
+    padding-left: 10px;
+  }
+  .subscription form .select_option {
+    padding-left: 10px;
+  }
+  .subscription form input[type="email"] {
+    padding: 0 22px;
+    width: 224px;
+    font-size: 14px;
+  }
+  .subscription form input[type="submit"] {
+    width: 228px;
+    font-size: 14px;
+  }
+  .footer_head_logo {
+    width: 154px;
+  }
+  .footer_body_copyright {
+    max-width: 402px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  .footer_body_info_rights {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .content {
+    padding-top: 168px;
+    padding-bottom: 56px;
+  }
+  .content_background {
+    background-color: #fff;
+    padding-bottom: 50px;
+    margin-bottom: -56px;
+  }
+  .container {
+    padding: 0 15px;
+  }
+  .header_menu {
+    display: none;
+  }
+  .header .button-mobile-menu {
+    display: block;
+  }
+  .horoscope {
+    margin-bottom: 68px;
+  }
+  .horoscope_header_meta_name {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 7px;
+  }
+  .horoscope_header_meta_date {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .horoscope_day {
+    margin-bottom: 56px;
+  }
+  .horoscope_day_content h3 {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 26px;
+  }
+  .horoscope_type_label {
+    font-size: 20px;
+  }
+  .horoscope_type_label_zodiac {
+    margin-right: 10px;
+  }
+  .horoscope .decore1 {
+    display: none;
+  }
+  .horoscope .decore2 {
+    background-size: 50%;
+    right: -4%;
+    top: -10%;
+  }
+  .zodiac {
+    margin-top: 56px;
+  }
+  .zodiac_list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 20px;
+  }
+  .zodiac_list_item {
+    width: calc(100% / 3);
+    margin-bottom: 30px;
+  }
+  .zodiac_list_item_name {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  .home {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin-bottom: 68px;
+  }
+  .home_content {
+    width: 100%;
+    margin-bottom: 56px;
+  }
+  .home_content_title {
+    margin-bottom: 32px;
+  }
+  .home_content .horoscopeall_select {
+    margin-bottom: 32px;
+  }
+  .home_content .horoscopeall_select label {
+    font-size: 20px;
+    height: 57px;
+  }
+  .home_content .horoscopeall_body p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .home_zodiac {
+    width: 100%;
+  }
+  .home_zodiac_list_item {
+    width: calc(100% / 3);
+    margin: 0;
+    margin-bottom: 30px;
+  }
+  .home .decore1 {
+    display: none;
+  }
+  .home .decore2 {
+    right: -120px;
+    top: -160px;
+    background-size: 50%;
+  }
+  .news_wrap_block {
+    margin-bottom: 30px;
+    width: 100%;
+    padding: 0;
+  }
+  .news_wrap_block:hover {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    z-index: 1;
+  }
+  .news_wrap_block_preview {
+    height: 200px;
+  }
+  .news_wrap_block_title {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    min-height: auto;
+    max-height: 48px;
+  }
+  .news_wrap_block_preview-text {
+    font-size: 18px;
+    line-height: 22px;
+    min-height: auto;
+    max-height: 72px;
+    margin-bottom: 0;
+  }
+  .news.news_popular .news_wrap_block:nth-child(3), .news.news_popular .news_wrap_block:nth-child(4) {
+    display: none;
+  }
+  .article {
+    margin-top: -68px;
+  }
+  .article h1 {
+    font-size: 36px;
+    line-height: 44px;
+    margin-top: 32px;
+    margin-bottom: 24px;
+  }
+  .article p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  .article ul {
+    padding-left: 0;
+  }
+  .article ul li {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .article ol {
+    padding-top: 56px;
+    padding-bottom: 56px;
+    padding-left: 16px;
+    padding-right: 22px;
+  }
+  .article ol li {
+    padding-left: 36px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .article ol li:before {
+    top: -2px;
+  }
+  .article img {
+    min-height: 390px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .article .line {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .article .line .footnote {
+    width: 100%;
+    margin: 0;
+    font-size: 22px;
+    line-height: 26px;
+    padding: 33px 30px;
+  }
+  .article .slider {
+    margin-top: 34px;
+    margin-bottom: 34px;
+  }
+  .article .slider .slick-list {
+    width: 374px;
+    height: 304px;
+  }
+  .article .slider_item {
+    height: 304px;
+  }
+  .article .slick-prev,
+  .article .slick-next {
+    width: 28px;
+    height: 28px;
+  }
+  .article_header {
+    border-radius: 0;
+    width: calc(100% + 30px);
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 14px;
+  }
+  .article_header h1 {
+    margin: 0;
+  }
+  .article_share {
+    margin-bottom: 0;
+  }
+  .article_share_wrap {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .article_share_block {
+    width: calc(50% - 15px);
+  }
+  .article_share_block:nth-child(2n) {
+    margin-right: 0;
+  }
+  .subscription {
+    width: 100%;
+    padding: 39px 0;
+    margin-top: 56px;
+    margin-bottom: 54px;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .subscription form {
+    width: 406px;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .subscription form .select {
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-right: 1px solid #644EEE;
+    border-radius: 3px;
+  }
+  .subscription form .select:after {
+    right: 25px;
+  }
+  .subscription form .select:focus {
+    border-radius: 3px 3px 0 0;
+  }
+  .subscription form .select_dropdown {
+    max-height: 320px;
+    overflow-y: auto;
+  }
+  .subscription form .select_text {
+    padding-left: 20px;
+  }
+  .subscription form .select_option {
+    height: 40px;
+    padding-left: 20px;
+  }
+  .subscription form input[type="email"] {
+    padding: 0 20px;
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    border-right: 1px solid #644EEE;
+    border-radius: 3px;
+  }
+  .subscription form input[type="submit"] {
+    width: 100%;
+    height: 55px;
+    font-size: 20px;
+    border-radius: 3px;
+  }
+  .footer_head {
+    margin-bottom: 40px;
+  }
+  .footer_head_menu {
+    margin-top: 10px;
+  }
+  .footer_head_menu ul li a {
+    font-size: 20px;
+  }
+  .footer_body_copyright {
+    font-size: 15px;
+    line-height: 18px;
+    max-width: 210px;
+  }
+  .footer_body_info {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .footer_body_info_rights {
+    margin-bottom: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */

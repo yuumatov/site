@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Horo – Новости и статьи</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Скрипт для адаптирования под мобильные устройства -->
+    <script>
+        var metaTag=document.createElement('meta');
+        metaTag.name = "viewport";
+        if (screen.width <= 479) {
+            metaTag.content = "width=480, user-scalable=false"
+            window.addEventListener("orientationchange", function() {
+                viewport = document.querySelector("meta[name=viewport]");
+                if(window.orientation === 90 || window.orientation === -90){
+                    viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=false');
+                } else{
+                    viewport.setAttribute('content', 'width=480, user-scalable=false');
+                };
+            }, false);
+        } else{
+            metaTag.content = "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=false"
+        };
+        document.getElementsByTagName('head')[0].appendChild(metaTag);
+    </script>
+</head>
+<body>
+    <!-- .header -->
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="header_logo"><img src="img/logo.svg" alt="Horo"></a>
+            <div class="header_date">27 июня / 2019</div>
+            <nav class="header_menu">
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="articles.html" class="active">Статьи</a></li>
+                    <li><a href="#">En</a></li>
+                </ul>
+            </nav>
+            <span class="button-mobile-menu"></span>
+        </div>
+    </header>
+    <!-- /.header -->
+
+    <!-- .mobile-menu -->
+    <div class="mobile-menu">
+        <nav class="mobile-menu_nav">
+            <div class="container">
+                <span>Menu</span>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="articles.html">Статьи</a></li>
+                    <li><a href="#">En</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="mobile-menu_footer">
+            <div class="container">
+                <div class="footer_head">
+                    <img class="footer_head_logo" src="img/logo-footer.svg" alt="Horo">
+                </div>
+                <div class="footer_body">
+                    <div class="footer_body_copyright">© 2019, HORO.ua - гороскоп на сегодня, завтра, неделю. <br> Все права защищены. Любая перепечатка разрешается только с использованием активной индексируемой ссылки на сам материал или на главную страницу.</div>
+                    <div class="footer_body_info">
+                        <span class="footer_body_info_rights">All rights reserved</span>
+                        <span>Дизайн сделал<br><a href="#">Bocharov</a></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.mobile-menu -->
+
+    <!-- .content -->
+    <main class="content">
+        <div class="container">
+
+            <!-- .news -->
+            <article class="news">
+                <h1 class="news_title">Новости и статьи</h1>
+                <div class="news_wrap">
+
+                    <!-- .news_wrap_block -->
+                    <div class="news_wrap_block">
+                        <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img1.png')"></div>
+                        <a href="article.html" class="news_wrap_block_title">Бумажный шпагат, где и как его использовать</a>
+                        <div class="news_wrap_block_preview-text">Шпагат, он же бечёвка — это достаточно тонкая упаковочная нить. Чтобы сделать бумажный шпагат, нужно скрутить ...</div>
+                    </div>
+                    <!-- /.news_wrap_block -->
+
+                    <!-- repeat blocks .news_wrap_block -->
+                    <div class="news_wrap_block">
+                        <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img2.png')"></div>
+                        <a href="article.html" class="news_wrap_block_title">Зороастрийский гороскоп древнее и точнее китайского</a>
+                        <div class="news_wrap_block_preview-text">Китайский гороскоп из 12 животных считается менее точным, чем зороастрийский, поскольку в нем представлено 32 тотема ...</div>
+                    </div>
+                    <div class="news_wrap_block">
+                        <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img3.png')"></div>
+                        <a href="article.html" class="news_wrap_block_title">Профессиональная косметика: чем отличается от обычной?</a>
+                        <div class="news_wrap_block_preview-text">Любая женщина хочет всегда выглядеть безупречно и на это она тратит не только много своего времени, но и финансов.</div>
+                    </div>
+                    <div class="news_wrap_block">
+                        <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img4.png')"></div>
+                        <a href="article.html" class="news_wrap_block_title">Ментальная арифметика в Школе Соробан</a>
+                        <div class="news_wrap_block_preview-text">Предоставить детям возможность раскрыть и применить в жизни необыкновенный природный дар</div>
+                    </div>
+                    <div class="news_wrap_block">
+                        <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img3.png')"></div>
+                        <a href="article.html" class="news_wrap_block_title">Профессиональная косметика: чем отличается от обычной?</a>
+                        <div class="news_wrap_block_preview-text">Любая женщина хочет всегда выглядеть безупречно и на это она тратит не только много своего времени, но и финансов.</div>
+                    </div>
+                    <div class="news_wrap_block">
+                        <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img2.png')"></div>
+                        <a href="article.html" class="news_wrap_block_title">Зороастрийский гороскоп древнее и точнее китайского</a>
+                        <div class="news_wrap_block_preview-text">Китайский гороскоп из 12 животных считается менее точным, чем зороастрийский, поскольку в нем представлено 32 тотема ...</div>
+                    </div>
+                    <div class="news_wrap_block">
+                        <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img1.png')"></div>
+                        <a href="article.html" class="news_wrap_block_title">Бумажный шпагат, где и как его использовать</a>
+                        <div class="news_wrap_block_preview-text">Шпагат, он же бечёвка — это достаточно тонкая упаковочная нить. Чтобы сделать бумажный шпагат, нужно скрутить ...</div>
+                    </div>
+                    <div class="news_wrap_block">
+                        <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img4.png')"></div>
+                        <a href="article.html" class="news_wrap_block_title">Ментальная арифметика в Школе Соробан</a>
+                        <div class="news_wrap_block_preview-text">Предоставить детям возможность раскрыть и применить в жизни необыкновенный природный дар</div>
+                    </div>
+                    <div class="news_wrap_block">
+                        <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img1.png')"></div>
+                        <a href="article.html" class="news_wrap_block_title">Бумажный шпагат, где и как его использовать</a>
+                        <div class="news_wrap_block_preview-text">Шпагат, он же бечёвка — это достаточно тонкая упаковочная нить. Чтобы сделать бумажный шпагат, нужно скрутить ...</div>
+                    </div>
+                    <div class="news_wrap_block">
+                        <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img4.png')"></div>
+                        <a href="article.html" class="news_wrap_block_title">Ментальная арифметика в Школе Соробан</a>
+                        <div class="news_wrap_block_preview-text">Предоставить детям возможность раскрыть и применить в жизни необыкновенный природный дар</div>
+                    </div>
+                    <div class="news_wrap_block">
+                        <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img3.png')"></div>
+                        <a href="article.html" class="news_wrap_block_title">Профессиональная косметика: чем отличается от обычной?</a>
+                        <div class="news_wrap_block_preview-text">Любая женщина хочет всегда выглядеть безупречно и на это она тратит не только много своего времени, но и финансов.</div>
+                    </div>
+                    <div class="news_wrap_block">
+                        <div class="news_wrap_block_preview" style="background-image: url('img/post/post-img2.png')"></div>
+                        <a href="article.html" class="news_wrap_block_title">Зороастрийский гороскоп древнее и точнее китайского</a>
+                        <div class="news_wrap_block_preview-text">Китайский гороскоп из 12 животных считается менее точным, чем зороастрийский, поскольку в нем представлено 32 тотема ...</div>
+                    </div>
+                    <!-- repeat blocks /.news_wrap_block -->
+                </div>
+            </article>
+            <!-- /.news -->
+
+            <!-- .pagination -->
+            <article class="pagination">
+                <ul>
+                    <li><a class="pagination_block pagination_block__arrow" href="#"><svg class="pagination_arrow" width="8" height="12" viewBox="0 0 8 12" xmlns="http://www.w3.org/2000/svg"><path d="M6.9043 11.2459C6.77305 11.2459 6.64043 11.2021 6.52969 11.1146L0.735547 6.45386C0.594727 6.34039 0.512695 6.16949 0.512695 5.98765C0.512695 5.80718 0.594727 5.63492 0.735547 5.52281L6.50508 0.886676C6.76211 0.680231 7.13809 0.721246 7.34453 0.978278C7.55098 1.23531 7.50996 1.61129 7.25293 1.81773L2.06309 5.98765L7.27891 10.1836C7.53594 10.39 7.57695 10.766 7.37051 11.023C7.25156 11.1693 7.0793 11.2459 6.9043 11.2459Z"/></svg></a></li>
+                    <li><a class="pagination_block" href="#">1</a></li>
+                    <li><a class="pagination_block active" href="#">2</a></li>
+                    <li><a class="pagination_block" href="#">3</a></li>
+                    <li><a class="pagination_block" href="#">4</a></li>
+                    <li><a class="pagination_block" href="#">5</a></li>
+                    <li><a class="pagination_block" href="#">6</a></li>
+                    <li><a class="pagination_block" href="#">7</a></li>
+                    <li><a class="pagination_block" href="#">8</a></li>
+                    <li><a class="pagination_block" href="#">9</a></li>
+                    <li><a class="pagination_block pagination_block__arrow" href="#"><svg class="pagination_arrow pagination_arrow__right" width="8" height="12" viewBox="0 0 8 12" xmlns="http://www.w3.org/2000/svg"><path d="M6.9043 11.2459C6.77305 11.2459 6.64043 11.2021 6.52969 11.1146L0.735547 6.45386C0.594727 6.34039 0.512695 6.16949 0.512695 5.98765C0.512695 5.80718 0.594727 5.63492 0.735547 5.52281L6.50508 0.886676C6.76211 0.680231 7.13809 0.721246 7.34453 0.978278C7.55098 1.23531 7.50996 1.61129 7.25293 1.81773L2.06309 5.98765L7.27891 10.1836C7.53594 10.39 7.57695 10.766 7.37051 11.023C7.25156 11.1693 7.0793 11.2459 6.9043 11.2459Z"/></svg></a></li>
+                </ul>
+            </article>
+            <!-- /.pagination -->
+
+        </div>
+    </main>
+    <!-- /.content -->
+
+    <!-- .footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer_head">
+                <img class="footer_head_logo" src="img/logo-footer.svg" alt="Horo">
+                <nav class="footer_head_menu">
+                    <ul>
+                        <li><a href="#">Главная</a></li>
+                        <li><a href="#">Статьи</a></li>
+                        <li><a href="#">En</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer_body">
+                <div class="footer_body_copyright">© 2019, HORO.ua - гороскоп на сегодня, завтра, неделю. <br> Все права защищены. Любая перепечатка разрешается только с использованием активной индексируемой ссылки на сам материал или на главную страницу.</div>
+                <div class="footer_body_info">
+                    <span class="footer_body_info_rights">All rights reserved</span>
+                    <span>Дизайн сделал<br><a href="#">Bocharov</a></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /.footer -->
+
+    <!-- connecting scripts -->
+    <script src="js/jquery.js"></script>
+    <script src="js/select.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
