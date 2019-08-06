@@ -1,0 +1,32 @@
+.footer {
+	width: 100%;
+	height: auto;
+	background-color: #1d191b;
+	padding: 40px 0;
+	.footer-wrapper {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.footer-logo_and_copy {
+			display: flex;
+			align-items: center;
+			img {
+				height: 62px;
+				margin-right: 66px;
+			}
+			p {
+				font-family: 'Roboto';
+				font-size: 14px;
+				color: #fff;
+			}
+		}
+		.footer-confid {
+			a {
+				text-decoration: none;
+				font-family: 'Roboto';
+				font-size: 14px;
+				color: $brown;
+			}
+		}
+	}
+}

@@ -1,0 +1,121 @@
+.form {
+	margin: 80px 0;
+	.form-wrapper {
+		width: 100%;
+		height: auto;
+		padding: 46px 78px;
+		background-color: $brown;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.form-title {
+			h1 {
+				max-width: 240px;
+				color: #fff;
+				font-size: 36px;
+				padding-bottom: 28px;
+				line-height: 1.3em;
+				position: relative;
+				&:after {
+					content: '';
+					width: 150px;
+					height: 3px;
+					background-color: $black;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+				}
+			}
+		}
+		form {
+			display: flex;
+			align-items: center;
+			input[type="text"],
+			input[type="tel"] {
+				margin-right: 40px;
+				padding: 10px 0;
+				font-size: 18px;
+				color: $black;
+				background-color: transparent;
+				border: 0;
+				border-bottom: 2px solid $black;
+				opacity: 0.7;
+				transition: 0.3s ease-in-out;
+				&:focus {
+					opacity: 1;
+				}
+			}
+			p {
+				position: relative;
+				&:before {
+					content: ' ';
+					position: absolute;
+					width: 3px;
+					height: 20px;
+					background-color: $brown;
+					left: 0;
+					top: 3px;
+				}
+				&:after {
+					content: ' ';
+					position: absolute;
+					width: 3px;
+					height: 20px;
+					background-color: $brown;
+					bottom: 3px;
+					right: 0;
+				}
+			}
+			.button {
+				cursor: pointer;
+				display: inline-block;
+				background: transparent;
+				border-top: 3px solid #fff;
+				border-bottom: 3px solid #fff;
+				border-left: 0;
+				border-right: 0;
+				padding: 20px 60px;
+				font-family: 'Roboto Slab';
+				font-weight: 700;
+				font-size: 14px;
+				text-transform: uppercase;
+				position: relative;
+				color: #fff;
+				&:after {
+					content: '';
+					position: absolute;
+					height: 60%;
+					width: 3px;
+					background-color: #fff;
+					bottom: 0;
+					left: 0;
+					transition: 0.3s ease-in-out;
+				}
+				&:before {
+					content: '';
+					position: absolute;
+					height: 60%;
+					width: 3px;
+					background-color: #fff;
+					top: 0;
+					right: 0;
+					transition: 0.3s ease-in-out;
+				}
+				&:hover {
+					&:after {
+						height: 100%;
+					}
+					&:before {
+						height: 100%;
+					}
+				}
+			}
+			input::-webkit-input-placeholder {
+				color: $black;
+			}
+			input:-moz-placeholder {
+				color: $black;
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+.services {
+	margin-bottom: 105px;
+	.services-wrapper {
+		display: flex;
+		justify-content: space-between;
+		.services-block {
+			width: 32%;
+			img {
+				width: 100%;
+				margin-bottom: 37px;
+			}
+			p {
+				font-size: 24px;
+				color: $black;
+				line-height: 1.6em;
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+body {
+	font-family: 'Roboto Slab';
+}
+
+.container {
+	max-width: 1260px;
+	height: auto;
+	margin: auto;
+	padding: 0 15px;
+}
+
+.section-title {
+	font-size: 55px;
+	color: $black;
+	padding-bottom: 40px;
+	margin-bottom: 60px;
+	position: relative;
+	&:after {
+		position: absolute;
+		content: '';
+		width: 150px;
+		height: 4px;
+		background-color: $brown;
+		bottom: 0;
+		left: 0;
+	}
+}

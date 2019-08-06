@@ -1,0 +1,212 @@
+.rent {
+	width: 100%;
+	height: auto;
+	margin-bottom: 100px;
+	table {
+		width: 100%;
+		tr {
+			height: 200px;
+			td {
+				border: 2px solid #cfcfcf;
+				background: url(../img/icons/plus.png) no-repeat right 40px bottom 40px;
+				&:nth-child(1),
+				&:nth-child(2) {
+					width: 50%;
+				}
+				a {
+					display: block;
+					line-height: 200px;
+					text-align: center;
+					color: $black;
+					font-size: 30px;
+					text-decoration: none;
+					border: 4px solid #fff;
+					transition: 0.3s;
+					position: relative;
+					&:after {
+						content: '';
+						position: absolute;
+						width: 4px;
+						height: 65px;
+						background-color: #fff;
+						left: -4px;
+						top: 0;
+					}
+					&:before {
+						content: '';
+						position: absolute;
+						width: 4px;
+						height: 65px;
+						background-color: #fff;
+						right: -4px;
+						bottom: 0;
+					}
+					&:hover {
+						border: 4px solid $brown;
+					}
+				}
+			}
+		}
+	}
+}
+
+.popup-rent {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding: 20px;
+	background-color: rgba(34,29,23,0.5);
+	overflow-y: auto;
+	z-index: 900;
+	.rent-popup-blocks {
+		width: 100%;
+		height: auto;
+		display: flex;
+		background-color: #fff;
+		padding: 20px;
+		padding-bottom: 30px;
+		flex-wrap: wrap;
+		position: relative;
+		.rent-popup-block {
+			width: calc(50% - 55px);
+			&:nth-child(1) {
+			margin-right: 20px;
+			}
+			&:nth-child(2) {
+				margin-left: 20px;
+				margin-right: 70px;
+			}
+			.rent-popup-block-title {
+				padding: 20px;
+				background-color: $brown;
+				h1 {
+					font-size: 24px;
+					color: #fff;
+				}
+				p {
+					margin-top: 10px;
+					font-size: 16px;
+					color: #fff;
+				}
+			}
+			.rent-popup-block-table {
+				table {
+					width: 100%;
+					color: $black;
+					thead {
+						background-color: #f8f5f1;
+						img {
+							width: 30px;
+							height: 30px;
+						}
+						th {
+							text-align: center;
+							padding: 20px 0;
+						}
+					}
+					tr {
+						td {
+							text-align: center;
+							padding: 20px 0;
+							line-height: 1.4em;
+							&:nth-child(1) {
+								text-align: left;
+							}
+						}
+					}
+				}
+			}
+			.rent-popup-block-uslugi {
+				margin-top: 30px;
+				h1 {
+					font-size: 22px;
+					color: $brown;
+					margin-bottom: 10px;
+				}
+				p {
+					font-size: 16px;
+					color: $black;
+					line-height: 1.4em;
+					margin-bottom: 14px;
+				}
+				span {
+					display: block;
+					color: $black;
+					margin-bottom: 30px;
+				}
+			}
+		}
+		.rent-popup-block-info {
+			padding: 20px;
+			margin-bottom: 20px;
+			h1 {
+				font-size: 18px;
+				color: $black;
+				margin-bottom: 14px;
+			}
+			p {
+				font-size: 16px;
+				color: $black;
+				line-height: 1.4em;
+				padding-bottom: 10px;
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+			&:nth-child(1) {
+				background-color: #f8f5f1;
+			}
+		}
+	}
+	.rent-popup-block-form {
+		width: 100%;
+		margin-top: 30px;
+		border-top: 2px solid $brown;
+		padding-top: 30px;
+		.rent-popup-block-form-title {
+			margin-bottom: 30px;
+			h1 {
+				text-align: center;
+				font-size: 24px;
+				text-transform: uppercase;
+				color: $black;
+				font-weight: 500;
+			}
+		}
+		form {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			input {
+				font-family: 'Roboto';
+				font-size: 16px;
+				padding: 10px 20px;
+				margin-right: 30px;
+				border: 2px solid $brown;
+				background: #fff;
+				&:last-child {
+					margin-right: 0;
+				}
+				&[type="submit"] {
+					cursor: pointer;
+					color: #fff;
+					background-color: $brown;
+				}
+			}
+		}
+	}
+}
+
+.popup-close-rent {
+	cursor: pointer;
+	top: 20px;
+	right: 20px;
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	background: url(../img/icons/close.svg) no-repeat center;
+	background-size: cover;
+}
