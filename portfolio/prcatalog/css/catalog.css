@@ -1,13 +1,7 @@
-body {
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
-
 .catalog_block_title {
   width: 100%;
   height: 352px;
-  background: url("../images/catalog_title_fon.PNG") no-repeat;
+  background: url("/images/catalog_title_fon.PNG") no-repeat;
   background-size: cover;
   margin-top: 80px;
 }
@@ -93,7 +87,7 @@ body {
   border: 1px solid #0273ed;
   border-radius: 2px;
   font-size: 14px;
-  background: url("../images/arrow_select.svg") no-repeat;
+  background: url("/images/arrow_select.svg") no-repeat;
   background-position: right 12px center;
   padding-left: 16px;
 }
@@ -203,15 +197,15 @@ body {
 }
 
 .catalog_item .catalog_item_head .catalog_item_info .info_block .info_block_img.info_block_img__1 {
-  background-image: url("../images/lock.svg");
+  background-image: url("/images/lock.svg");
 }
 
 .catalog_item .catalog_item_head .catalog_item_info .info_block .info_block_img.info_block_img__2 {
-  background-image: url("../images/link.svg");
+  background-image: url("/images/link.svg");
 }
 
 .catalog_item .catalog_item_head .catalog_item_info .info_block .info_block_img.info_block_img__3 {
-  background-image: url("../images/g.svg");
+  background-image: url("/images/g.svg");
 }
 
 .catalog_item .catalog_item_head .catalog_item_info .info_block .info_block_text {
@@ -395,29 +389,29 @@ body {
 }
 
 .catalog_item .catalog_item_body .flag.f_ua {
-  background-image: url("../images/ua.svg");
+  background-image: url("/images/ua.svg");
 }
 
 .catalog_item .catalog_item_body .flag.f_ru {
-  background-image: url("../images/ru.svg");
+  background-image: url("/images/ru.svg");
 }
 
 .catalog_item .catalog_item_body .flag.f_by {
-  background-image: url("../images/by.svg");
+  background-image: url("/images/by.svg");
 }
 
 .catalog_item .catalog_item_body .flag.f_de {
-  background-image: url("../images/de.svg");
+  background-image: url("/images/de.svg");
 }
 
 .catalog_item .catalog_item_body .flag.f_pl {
-  background-image: url("../images/pl.svg");
+  background-image: url("/images/pl.svg");
 }
 
 .catalogs {
   width: 100%;
   padding: 56px 0;
-  background: #f7f7f7 url("../images/polygonal.png") no-repeat;
+  background: #f7f7f7 url("/images/polygonal.png") no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -483,7 +477,7 @@ body {
   width: 19px;
   height: 19px;
   position: absolute;
-  background: url("../images/close.svg") no-repeat center;
+  background: url("/images/close.svg") no-repeat center;
   background-size: cover;
   top: 27px;
   right: 27px;
