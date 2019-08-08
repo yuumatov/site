@@ -56,6 +56,7 @@ h4 {
         justify-content: center;
         align-items: center;
         transition: 0.2s ease-in-out;
+        cursor: pointer;
         &:hover {
             box-shadow: 0px 12px 24px rgba(0, 0, 51, 0.1);
             transform: translateY(-10px);
@@ -107,4 +108,87 @@ h4 {
         box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.14);
         transform: translateY(5px);
     }
+}
+
+.contacts {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: none;
+    padding: 20px;
+    padding-bottom: 10px;
+    border-radius: 0 0 10px  10px;
+    transform: translateX(-50%) translateY(-100%);
+    transition: 0.3s ease-in-out;
+    &.contacts_open {
+        box-shadow: 0px 14px 20px rgba(0, 0, 0, 0.1);
+        transform: translateX(-50%) translateY(0);
+    }
+    &__link {
+        text-decoration: none;
+        width: 100%;
+        height: 40px;
+        border-radius: 10px;
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 500;
+        color: #ffffff;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        background-position: center left 10px;
+        background-repeat: no-repeat;
+        &:last-child {
+            margin-bottom: 10px;
+        }
+        &_vk {
+            background-image: url('../img/contacts/vk.svg');
+            background-color: #4A76A8;
+            &:hover {
+                background-color: darken(#4A76A8, 10%);
+            }
+        }
+        &_email {
+            background-image: url('../img/contacts/email.svg');
+            background-color: #FED01E;
+            color: #1d1d1d;
+            &:hover {
+                background-color: darken(#FED01E, 10%);
+            }
+        }
+        &_telegram {
+            background-image: url('../img/contacts/telegram.svg');
+            background-color: #5682A3;
+            &:hover {
+                background-color: darken(#5682A3, 10%);
+            }
+        }
+        &_whatsapp {
+            background-image: url('../img/contacts/whatsapp.svg');
+            background-color: #1EBEA5;
+            &:hover {
+                background-color: darken(#1EBEA5, 10%);
+            }
+        }
+        &_skype {
+            background-image: url('../img/contacts/skype.svg');
+            background-color: #F2F2F2;
+            color: #00A4E8;
+            &:hover {
+                background-color: darken(#F2F2F2, 10%);
+            }
+        }
+    }
+    &__close {
+        width: 100%;
+        height: 21px;
+        cursor: pointer;
+        background-image: url('../img/arrow.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+    } 
 }
