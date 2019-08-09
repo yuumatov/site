@@ -1,3 +1,8 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   background-color: #fafaff;
   font-family: 'Roboto', sans-serif;
@@ -135,6 +140,7 @@ h4 span {
   text-decoration: none;
   -webkit-transition: 0.2s ease-in-out;
   transition: 0.2s ease-in-out;
+  margin-bottom: 40px;
 }
 
 .order-button:hover {
@@ -252,5 +258,87 @@ h4 span {
   background-image: url("../img/arrow.svg");
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1023px) {
+  h4 {
+    margin-bottom: 40px;
+  }
+  .menu {
+    max-width: 390px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .menu-block {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 30px;
+  }
+  .menu-block:nth-child(2n) {
+    margin-right: 0;
+  }
+  .menu-block__img {
+    width: 50px;
+    height: 50px;
+  }
+  .menu-block__title {
+    font-size: 16px !important;
+  }
+  .menu-block_alt .menu-block__title {
+    font-size: 26px !important;
+  }
+  .order-button {
+    margin-top: 20px;
+    padding: 10px 36px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 539px) {
+  h2 {
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  h1 {
+    font-size: 26px;
+  }
+  h4 {
+    font-size: 14px;
+    padding: 0 22px;
+    line-height: 1.4em;
+    margin-bottom: 28px;
+  }
+  .menu {
+    padding: 0 20px;
+  }
+  .menu-block {
+    width: 120px;
+    height: 120px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  .menu-block__img {
+    width: 34px;
+    height: 34px;
+  }
+  .menu-block__title {
+    margin-top: 10px !important;
+    font-size: 14px !important;
+  }
+  .menu-block_alt .menu-block__title {
+    font-size: 20px !important;
+    margin-bottom: 10px !important;
+  }
+  .menu-block_alt .menu-block__description {
+    font-size: 14px !important;
+    margin-bottom: 0 !important;
+  }
+  .menu-block_alt .menu-block__description_alt {
+    font-size: 14px !important;
+  }
+  .order-button {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
