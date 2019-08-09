@@ -248,6 +248,7 @@ h4 {
         margin-bottom: 28px;
     }
     .menu {
+        max-width: 320px;
         padding: 0 20px;
         &-block {
             width: 120px;
@@ -268,8 +269,8 @@ h4 {
                     margin-bottom: 10px !important;
                 }
                 .menu-block__description {
-                    font-size: 14px !important;
-                    margin-bottom: 0 !important;
+                    font-size: 12px !important;
+                    margin-bottom: 4px !important;
                     &_alt {
                         font-size: 14px !important;
                     }
