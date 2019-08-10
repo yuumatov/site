@@ -21,6 +21,10 @@
     <link rel="preload" href="css/style.css" as="style" onload="this.rel='stylesheet'">
 </head>
 <body>
+    <div class="loaderArea">
+        <div class="loader"></div>
+    </div>
+
     <h2>Yuumatov</h2>
     <h1>Frontend Developer</h1>
     <h4>Профессиональная верстка сайтов любой сложности <span>из</span> PSD, Sketch, Adobe XD, Figma, Zeplin <span>в</span> HTML и CSS</h4>
@@ -54,7 +58,15 @@
         <div class="contacts__close"></div>
     </div>
 
-    <script defer src="js/jquery.js"></script>
-    <script defer src="js/main.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $(window).on('load', function () {
+            $preloader = $('.loaderArea'),
+            $loader = $preloader.find('.loader');
+            $loader.fadeOut();
+            $preloader.delay(350).fadeOut('slow');
+        });
+    </script>
 </body>
 </html>
